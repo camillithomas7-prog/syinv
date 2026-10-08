@@ -2,6 +2,7 @@
 .ic{--c-bg:#fbf8f2;--c-card:#fffdf9;--c-ink:#2b2522;--c-ink2:#5a4f48;--c-mute:#8a7f76;--c-line:#e8dfd4;--c-brand:#7a2331;--c-soft:#f5e9ea;--c-gold:#a8864f;--c-ok:#2e8b57;--c-okbg:#e9f5ee;
   font-family:'Inter',system-ui,sans-serif;color:var(--c-ink);-webkit-font-smoothing:antialiased}
 .ic *{box-sizing:border-box}
+.ic b,.ic h2,.ic h3{font-variant-numeric:lining-nums}
 .ic h2,.ic h3,.ic .serif{font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:0;letter-spacing:-.01em}
 .ic button{font:inherit;color:inherit;cursor:pointer}
 .ic svg{flex:none}

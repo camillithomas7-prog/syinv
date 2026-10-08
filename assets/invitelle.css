@@ -77,7 +77,7 @@ em.g{font-style:italic;color:var(--brand)}
 .chip svg{width:17px;height:17px;color:var(--brand)}
 .cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 .price-inline{display:flex;flex-direction:column;line-height:1.2}
-.price-inline b{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink)}
+.price-inline b{font-variant-numeric:lining-nums;font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink)}
 .price-inline small{color:var(--mute);font-size:13px}
 .trust{display:flex;gap:10px 22px;margin-top:28px;color:var(--mute);font-size:13px;flex-wrap:wrap}
 .trust span{display:flex;align-items:center;gap:7px}
@@ -211,7 +211,7 @@ em.g{font-style:italic;color:var(--brand)}
 /* numeri */
 .nums{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 .num{text-align:center;padding:30px 10px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
-.num b{display:block;font-family:var(--serif);font-size:54px;font-weight:500;color:var(--brand);line-height:1}
+.num b{font-variant-numeric:lining-nums;display:block;font-family:var(--serif);font-size:54px;font-weight:500;color:var(--brand);line-height:1}
 .num span{display:block;margin-top:10px;color:var(--ink2);font-size:14px}
 
 /* funzioni */
@@ -244,8 +244,11 @@ em.g{font-style:italic;color:var(--brand)}
 @keyframes rot{to{--a:360deg}}
 .pcard .tag{display:inline-block;background:var(--brand);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;font-weight:600}
 .pcard h3{font-size:30px;margin:20px 0 6px}
-.pcard .p{font-family:var(--serif);font-size:76px;font-weight:600;line-height:1;margin:18px 0 4px;color:var(--ink)}
-.pcard .p sup{font-size:34px;vertical-align:top;margin-left:2px}
+.pcard .p{display:flex;justify-content:center;align-items:baseline;gap:6px;font-family:var(--serif);font-size:72px;font-weight:600;line-height:1;margin:22px 0 10px;color:var(--ink);font-variant-numeric:lining-nums;letter-spacing:-.02em}
+.pcard .p .cur{font-size:.5em;font-weight:500}
+.pcard .instead{font-size:15px;color:var(--mute);margin-bottom:4px}
+.pcard .instead s{color:var(--ink2);text-decoration-color:var(--brand);text-decoration-thickness:2px}
+.pcard .instead b{display:inline-block;margin-left:8px;padding:3px 9px;border-radius:999px;background:var(--brand);color:#fff;font-size:12px;font-weight:600;letter-spacing:.04em;vertical-align:1px}
 .pcard .once{color:var(--mute);font-size:14px;margin-bottom:26px}
 .pcard .btn{width:100%;padding:21px;font-size:17px}
 .pcard .mini{display:flex;justify-content:center;gap:18px;margin-top:20px;color:var(--mute);font-size:13px;flex-wrap:wrap}
@@ -284,7 +287,7 @@ footer .logo{justify-content:center;margin-bottom:10px}
 .sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);box-shadow:0 18px 40px -12px rgba(0,0,0,.35);border:1px solid var(--line);transform:translateY(140%);transition:transform .4s}
 .sticky.show{transform:none}
 .sticky .t{line-height:1.2;font-size:12px;color:var(--mute)}
-.sticky .t b{display:block;font-family:var(--serif);font-size:20px;color:var(--ink)}
+.sticky .t b{font-variant-numeric:lining-nums;display:block;font-family:var(--serif);font-size:20px;color:var(--ink)}
 .sticky .t b s{font-family:var(--sans);font-size:12px;font-weight:400;color:var(--mute)}
 .sticky .t .cdv{color:var(--brand)}
 .sticky .btn{margin-left:auto;padding:13px 22px;font-size:15px}
@@ -354,7 +357,7 @@ footer .logo{justify-content:center;margin-bottom:10px}
   .cmp-r>div{padding:13px 12px;font-size:13px}
   .cmp-r:first-child>div:nth-child(3){font-size:15px}
   .pcard{padding:34px 22px}
-  .pcard .p{font-size:64px}
+  .pcard .p{font-size:62px}
   .final{padding:100px 0}
   .sticky{display:flex}
 }
