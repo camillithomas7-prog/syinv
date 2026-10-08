@@ -49,6 +49,7 @@ window.InvCart = (() => {
     back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>',
     ok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" opacity=".35"/><path class="ck" d="M7.5 12.5l3 3 6-6.5"/></svg>',
   };
+  const COMPARE = 8999; // prezzo pieno dopo l'offerta di lancio
   const INC = ['24 temi video e 16 buste animate', 'RSVP con allergie e canzoni', 'Ospiti e invio su WhatsApp', '57 lingue', 'Budget, checklist e tavoli', 'Album foto con QR', 'Computer, telefono e app', 'Modifiche illimitate'];
 
   const payIcons = () => {
@@ -64,7 +65,7 @@ window.InvCart = (() => {
         <div class="s">${I.bolt}Prodotto digitale · niente spedizione</div>
         <div class="row">
           <div class="ic-qty"><button type="button" data-q="-1" aria-label="Diminuisci">${I.minus}</button><span>${it.quantity}</span><button type="button" data-q="1" aria-label="Aumenta">${I.plus}</button></div>
-          <div class="pr">${it.original_line_price > it.final_line_price ? `<s>${money(it.original_line_price)}</s>` : ''}${money(it.final_line_price)}</div>
+          <div class="pr"><s>${money(Math.max(it.original_line_price, COMPARE * it.quantity))}</s>${money(it.final_line_price)}</div>
         </div>
       </div>
       <button type="button" class="ic-rm" data-rm aria-label="Rimuovi">${I.trash}</button>
@@ -80,6 +81,7 @@ window.InvCart = (() => {
     </div>`;
   const trustHTML = () => `<div class="ic-trust"><span>${I.lock}Pagamento sicuro SSL</span><span>${I.shield}Dati protetti</span><span>${I.infinity}Nessun abbonamento</span></div><div class="ic-pay">${payIcons()}</div>`;
   const emptyHTML = btn => `<div class="ic-empty"><img class="seal" src="${A}rosso.png" alt=""><h3>Il carrello è vuoto</h3><p>Il vostro invito di nozze digitale vi aspetta: temi video, busta con ceralacca, RSVP e ospiti su WhatsApp.</p>${btn}</div>`;
+  const timerHTML = () => `<div class="ic-timer"><span class="dot"></span>Prezzo di lancio, scade tra <b data-cd>1:00:00</b><span class="af">poi 89,99 €</span></div>`;
   const checkoutBtn = (label = 'Vai al pagamento sicuro') => `<button type="button" class="ic-btn" data-go>${I.lock}<span>${label}</span></button>`;
 
   /* ---------- azioni comuni ---------- */
@@ -137,7 +139,7 @@ window.InvCart = (() => {
     $('.ft', w).hidden = false;
     $('.bd', w).innerHTML = (justAdded ? `<div class="ic-added">${I.ok}Aggiunto al carrello</div>` : '') + c.items.map(itemHTML).join('') + delivHTML()
       + `<div class="ic-box">${sumHTML(c, true)}</div>` + incHTML() + trustHTML() + `<button type="button" class="ic-link cont" data-close>Continua a guardare</button>`;
-    $('.ft', w).innerHTML = `<div class="ft-tot"><span>Totale</span><b>${money(c.total_price)}</b></div>` + checkoutBtn() + `<div class="ft-note">${I.lock}Pagamento sicuro · codice via email</div>`;
+    $('.ft', w).innerHTML = timerHTML() + `<div class="ft-tot"><span>Totale</span><b>${money(c.total_price)}</b></div>` + checkoutBtn() + `<div class="ft-note">${I.lock}Pagamento sicuro · codice via email</div>`;
     justAdded = false;
   }
   function open() {
@@ -175,6 +177,7 @@ window.InvCart = (() => {
           </div>
           <aside class="icp-card">
             <h3>Riepilogo</h3>
+            ${timerHTML()}
             ${sumHTML(c)}
             <div style="margin-top:18px">${checkoutBtn()}</div>
             ${trustHTML()}
@@ -190,6 +193,21 @@ window.InvCart = (() => {
     if (pre && !MOCK) { try { return start(JSON.parse(pre.textContent)); } catch (e) {} }
     api.get().then(start);
   }
+
+  /* ---------- timer offerta: un'ora per visitatore, condiviso da pagina e carrello ---------- */
+  (() => {
+    const KEY = 'invOfferEnd', HOUR = 3600000;
+    let end = 0; try { end = +localStorage.getItem(KEY) || 0; } catch (e) {}
+    const now = Date.now();
+    if (!end || end <= now || end - now > HOUR) { end = now + HOUR; try { localStorage.setItem(KEY, end); } catch (e) {} }
+    const two = n => (n < 10 ? '0' : '') + n;
+    const tick = () => {
+      const s = Math.max(0, Math.round((end - Date.now()) / 1000));
+      const t = Math.floor(s / 3600) + ':' + two(Math.floor(s % 3600 / 60)) + ':' + two(s % 60);
+      document.querySelectorAll('[data-cd]').forEach(e => { if (e.textContent !== t) e.textContent = t; });
+    };
+    tick(); setInterval(tick, 1000);
+  })();
 
   /* ---------- avvio ---------- */
   document.addEventListener('click', e => { const o = e.target.closest('[data-cart-open]'); if (o) { e.preventDefault(); open(); } });

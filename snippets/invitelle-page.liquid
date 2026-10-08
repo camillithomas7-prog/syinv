@@ -4,7 +4,7 @@
 <div class="inv-landing">
 
 
-<div class="ann">Offerta di lancio · <b>tutto il pacchetto a 29,99 €</b> · pagamento unico, nessun abbonamento</div>
+<div class="ann"><span class="tdot"></span>Prezzo di lancio <b>29,99 €</b> <s>89,99 €</s> · l'offerta scade tra <b class="cdv" data-cd>1:00:00</b></div>
 
 <header class="hdr" id="hdr">
   <div class="wrap">
@@ -31,7 +31,7 @@
     </div>
     <div class="h-cta cta-row h-in">
       <a class="btn" href="#prezzo">Voglio il mio invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <div class="price-inline"><b>29,99 €</b><small>una volta sola, tutto incluso</small></div>
+      <div class="price-inline"><b>29,99 € <s class="was">89,99 €</s></b><small>scade tra <span class="cdv" data-cd>1:00:00</span>, poi 89,99 €</small></div>
     </div>
     <div class="h-trust trust h-in">
       <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Codice subito via email</span>
@@ -210,8 +210,9 @@
       <img width="360" height="360" class="seal-c" src="{{ 'rosso.png' | asset_url }}" alt="">
       <span class="tag">Offerta di lancio</span>
       <h3>Invitelle · Pacchetto completo</h3>
-      <div class="p">29<sup>,99 €</sup></div>
-      <div class="once">pagamento unico · IVA inclusa</div>
+      <div class="timer"><span class="tdot"></span>Prezzo di lancio: scade tra <b data-cd>1:00:00</b></div>
+      <div class="p">29<sup>,99 €</sup><s class="was">89,99 €</s></div>
+      <div class="once">pagamento unico · IVA inclusa · poi tornerà a 89,99 €</div>
       <a class="btn" href="{{ inv_buy_url }}" data-checkout>Acquista e crea il tuo invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <div class="mini">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento sicuro</span>
@@ -266,7 +267,7 @@
   <div class="pol">{% for policy in shop.policies %}<a href="{{ policy.url }}">{{ policy.title }}</a>{% endfor %}</div>
 </footer>
 
-<div class="sticky" id="sticky"><div class="t">Pacchetto completo<b>29,99 €</b></div><a class="btn" href="#prezzo">Crea il tuo invito</a></div>
+<div class="sticky" id="sticky"><div class="t"><b>29,99 € <s>89,99 €</s></b>scade tra <span class="cdv" data-cd>1:00:00</span></div><a class="btn" href="#prezzo">Crea il tuo invito</a></div>
 
 
 </div>
