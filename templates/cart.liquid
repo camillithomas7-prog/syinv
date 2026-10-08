@@ -1,0 +1,10 @@
+<main class="simple"><div class="wrap">
+<h1>Il tuo carrello</h1>
+{%- if cart.item_count > 0 -%}
+<form action="{{ routes.cart_url }}" method="post">
+<table>{%- for item in cart.items -%}<tr><td>{{ item.product.title }}</td><td>{{ item.final_line_price | money }}</td><td><a href="{{ item.url_to_remove }}">Rimuovi</a></td></tr>{%- endfor -%}</table>
+<p style="font-size:20px;margin:24px 0"><b>Totale: {{ cart.total_price | money }}</b></p>
+<button class="btn" type="submit" name="checkout">Vai al pagamento</button>
+</form>
+{%- else -%}<p>Il carrello è vuoto.</p><a class="btn" href="{{ routes.root_url }}#prezzo">Scopri Invitelle</a>{%- endif -%}
+</div></main>

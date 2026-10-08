@@ -1,0 +1,3 @@
+<main class="simple"><div class="wrap">
+<h1>Attiva l'account</h1>{%- form 'activate_customer_password' -%}{{ form.errors | default_errors }}<input type="password" name="customer[password]" placeholder="Password"><input type="password" name="customer[password_confirmation]" placeholder="Conferma password"><br><button class="btn" type="submit">Attiva</button>{%- endform -%}
+</div></main>

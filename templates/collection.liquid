@@ -1,0 +1,4 @@
+<main class="simple"><div class="wrap">
+<h1>{{ collection.title }}</h1>
+{%- paginate collection.products by 24 -%}<div class="grid">{%- for p in collection.products -%}<a class="card" href="{{ p.url }}"><b>{{ p.title }}</b><br>{{ p.price | money }}</a>{%- endfor -%}</div>{%- endpaginate -%}
+</div></main>

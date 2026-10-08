@@ -1,0 +1,14 @@
+{%- if template.name == 'product' -%}{%- assign p = product -%}{%- else -%}{%- assign p = section.settings.product -%}{%- endif -%}
+{%- if p == blank -%}{%- assign p = all_products[section.settings.fallback_handle] -%}{%- endif -%}
+{% render 'invitelle-page', inv_product: p %}
+
+{% schema %}
+{
+  "name": "Pagina Invitelle",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Prodotto da acquistare (home)" },
+    { "type": "text", "id": "fallback_handle", "label": "Handle prodotto di riserva", "default": "invitelle" }
+  ],
+  "presets": [{ "name": "Pagina Invitelle" }]
+}
+{% endschema %}

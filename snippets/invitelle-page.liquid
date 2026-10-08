@@ -1,0 +1,281 @@
+{%- comment -%} Generato da ~/invitelle-pannello-page/build_shopify.py: non modificare a mano {%- endcomment -%}
+{%- assign inv_variant = inv_product.selected_or_first_available_variant -%}
+{%- if inv_variant -%}{%- assign inv_buy_url = '#prezzo' -%}{%- else -%}{%- assign inv_buy_url = '#prezzo' -%}{%- endif -%}
+<div class="inv-landing">
+
+
+<div class="ann">Offerta di lancio · <b>tutto il pacchetto a 29,99 €</b> · pagamento unico, nessun abbonamento</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top"><img width="256" height="256" src="{{ 'logo-invitelle.png' | asset_url }}" alt=""><b>Invitelle</b></a>
+    <nav><a href="#schermi">Desktop e app</a><a href="#ospiti">Gli ospiti</a><a href="#pannello">Il pannello</a><a href="#prezzo">Prezzo</a><a href="#faq">Domande</a></nav>
+    <a class="btn" href="#prezzo">Crea il tuo invito</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="petals"></canvas>
+  <div class="wrap hero-g">
+    <div class="h-top">
+      <span class="eyebrow h-in">Inviti di nozze digitali</span>
+      <h1><span class="l"><span>Il vostro invito,</span></span><span class="l"><span>creato da voi.</span></span><span class="l"><span><em class="g">In una sera.</em></span></span></h1>
+      <p class="lead h-in">Video cinematografici, busta con ceralacca che si apre, RSVP e ospiti su WhatsApp. Tutto in un unico pannello, da computer, telefono o come app.</p>
+    </div>
+    <div class="h-chips devices-chips h-in">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M1 20h22"/></svg>Computer</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Telefono</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg>App sulla Home</span>
+    </div>
+    <div class="h-cta cta-row h-in">
+      <a class="btn" href="#prezzo">Voglio il mio invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="price-inline"><b>29,99 €</b><small>una volta sola, tutto incluso</small></div>
+    </div>
+    <div class="h-trust trust h-in">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Codice subito via email</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Modifiche illimitate</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>57 lingue</span>
+    </div>
+
+    <div class="stage-box" id="stageBox">
+      <div class="glow"></div>
+      <div class="stage" id="stage">
+        <div class="scene" id="scene">
+          <div class="laptop"><div class="lid"><div class="scr"><img width="1600" height="1000" src="{{ 'd-envelope.webp' | asset_url }}" alt="Pannello Invitelle su computer: scelta della busta" fetchpriority="high"></div></div><div class="base"></div></div>
+          <div class="phone ph-b"><div class="island"></div><div class="scr"><video src="{{ 'chiesa.mp4' | asset_url }}" poster="{{ 't-chiesa.webp' | asset_url }}" autoplay muted loop playsinline></video><div class="inv-over"><div class="n">Stefania<br>&amp;<br>Angelo</div><div class="d">19 giugno 2027</div></div></div></div>
+          <div class="phone ph-a"><div class="island"></div><div class="scr"><img width="720" height="1558" src="{{ 'm-theme.webp' | asset_url }}" alt="Pannello Invitelle sul telefono: scelta del tema"></div></div>
+          <div class="seal3d"><img width="360" height="360" src="{{ 'rosso.png' | asset_url }}" alt=""></div>
+        </div>
+      </div>
+      <div class="badge3d bd-1"><span class="ic" style="background:#e6f4ea;color:#2e8b57"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Zia Carla ha risposto</b>Partecipa · senza lattosio</div></div>
+      <div class="badge3d bd-2"><span class="ic" style="background:var(--brand-soft);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/><circle cx="9" cy="7" r="4"/></svg></span><div><b>11 persone confermate</b>in tempo reale</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMI -->
+<section class="marq" aria-label="Temi video">
+  <div class="marq-lbl"><b>24 temi video cinematografici</b> e <b>16 buste animate</b>, già pronti da scegliere</div>
+  <div class="marq-in"><div class="marq-t" id="mq1"></div><div class="marq-t rev" id="mq2"></div></div>
+</section>
+
+<!-- TRE SCHERMI -->
+<section class="sec three" id="schermi">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Ovunque siate</span>
+      <h2>Un solo invito.<br><em class="g">Tre modi</em> per crearlo.</h2>
+      <p>Iniziate sul computer in ufficio, continuate dal divano col telefono. Ogni modifica si salva da sola ed è subito sincronizzata.</p>
+    </div>
+    <div class="three-grid" id="pin3">
+      <div class="steps3">
+        <div class="s3 on" data-i="0"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M1 20h22"/></svg>Dal computer</div><h3>Il pannello completo</h3><p>Tutte le schede a sinistra, l'anteprima dal vivo dell'invito a destra: vedete ogni modifica nell'istante in cui la fate.</p><div class="bar"><i></i></div></div>
+        <div class="s3" data-i="1"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Dal telefono</div><h3>Pensato per il pollice</h3><p>Schede scorrevoli, temi a tre per riga, blocchi da riordinare con le frecce. E un tocco su "Anteprima" per vedere l'invito come lo vedranno gli ospiti.</p><div class="bar"><i></i></div></div>
+        <div class="s3" data-i="2"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg>Come app</div><h3>Sulla schermata Home</h3><p>Aggiungete Invitelle alla Home di iPhone o Android: si apre a tutto schermo come una vera app, con la sua icona. Niente store, niente download.</p><div class="bar"><i></i></div></div>
+      </div>
+      <div class="stage3" id="stage3">
+        <div class="dv d1"><div class="laptop"><div class="lid"><div class="scr"><img width="1600" height="1000" src="{{ 'd-blocks.webp' | asset_url }}" alt="Pannello su computer: blocchi e anteprima live" loading="lazy"></div></div><div class="base"></div></div></div>
+        <div class="dv d2"><div class="phone"><div class="island"></div><div class="scr"><img width="720" height="1558" src="{{ 'm-blocks.webp' | asset_url }}" alt="Pannello su telefono: blocchi dell'invito" loading="lazy"></div></div></div>
+        <div class="dv d3"><div class="home"><div class="scr"><div class="time">9:41</div>
+          <div class="apps"><span class="app"><i></i>Foto</span><span class="app"><i></i>Meteo</span><span class="app"><i></i>Mappe</span><span class="app"><i></i>Note</span><span class="app"><i></i>Musica</span><span class="app inv"><i></i>Invitelle</span><span class="app"><i></i>Posta</span><span class="app"><i></i>Calendario</span></div>
+          <div class="dock"><i></i><i></i><i></i><i></i></div>
+          <div class="splash"><img width="256" height="256" src="{{ 'logo-invitelle.png' | asset_url }}" alt=""></div>
+          <div class="appview"><img width="720" height="1558" src="{{ 'm-guests.webp' | asset_url }}" alt="Invitelle aperta come app: ospiti e RSVP" loading="lazy"></div>
+        </div></div>
+        <div class="hand-note"><b>Tocca e si apre</b>A tutto schermo, senza barra del browser.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPERIENZA OSPITE -->
+<section class="sec" id="ospiti">
+  <div class="wrap guest">
+    <div class="guest-stage rv">
+      <div class="phone env-ph" id="envPh"><div class="island"></div><div class="scr">
+        <div class="layer" id="invLayer"><div class="scroller"><img width="540" height="7482" src="{{ 'invite-long.webp' | asset_url }}" alt="L'invito come lo vede l'ospite" loading="lazy"></div></div>
+        <div class="layer" id="envLayer"><video id="envVid" src="{{ 'env-riviera.mp4' | asset_url }}" poster="{{ 'e-riviera.webp' | asset_url }}" muted playsinline preload="metadata"></video><button class="tap" id="tapBtn" type="button">Tocca per aprire</button></div>
+      </div></div>
+      <div class="env-pick" id="envPick">
+        <button class="on" data-e="riviera" aria-label="Busta Riviera"><img width="480" height="849" src="{{ 'e-riviera.webp' | asset_url }}" alt=""></button>
+        <button data-e="ricamo" aria-label="Busta Ricamo di fiori"><img width="480" height="849" src="{{ 'e-ricamo.webp' | asset_url }}" alt=""></button>
+        <button data-e="notte" aria-label="Busta Notte stellata"><img width="480" height="849" src="{{ 'e-notte.webp' | asset_url }}" alt=""></button>
+        <button data-e="amalfi" aria-label="Busta Limoni di Amalfi"><img width="480" height="849" src="{{ 'e-amalfi.webp' | asset_url }}" alt=""></button>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Cosa vedranno i vostri ospiti</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px);margin:16px 0 18px">Un'emozione che inizia <em class="g">prima ancora</em> del matrimonio.</h2>
+      <p style="color:var(--ink2);font-size:18px;margin:0">Provatelo: toccate la busta. È esattamente quello che succede sul telefono di ogni invitato.</p>
+      <ul class="glist">
+        <li><span class="n">1</span><div><b>La busta si apre</b><span>Ceralacca, carta pregiata e un'apertura animata a tutto schermo.</span></div></li>
+        <li><span class="n">2</span><div><b>Il video con i vostri nomi</b><span>Il tema che avete scelto, con nomi e data scritti a mano, musica e atmosfera di petali, stelle o lucciole.</span></div></li>
+        <li><span class="n">3</span><div><b>Tutto quello che serve sapere</b><span>La vostra storia, il conto alla rovescia, luogo con mappa, programma, galleria, lista nozze con IBAN copiabile.</span></div></li>
+        <li><span class="n">4</span><div><b>Risponde in 20 secondi</b><span>RSVP con numero di persone, allergie e canzone preferita. Voi lo vedete subito nel pannello.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="sec show" id="pannello">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Il pannello, dal vero</span>
+      <h2>Tutto quello che vi serve,<br>in un unico posto.</h2>
+      <p>Queste sono le schermate reali di Invitelle, non disegni. Toccate le schede.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="show-stage rv">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>invitelle · il vostro invito</span></div><div class="view" id="bView"></div></div>
+      <div class="phone"><div class="island"></div><div class="scr" id="pView"></div></div>
+    </div>
+    <div class="show-desc" id="sDesc"><h3></h3><p></p></div>
+  </div>
+</section>
+
+<!-- NUMERI -->
+<section class="sec" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="nums rv">
+      <div class="num"><b data-n="24">0</b><span>temi video</span></div>
+      <div class="num"><b data-n="16">0</b><span>buste animate</span></div>
+      <div class="num"><b data-n="16">0</b><span>tipi di blocco</span></div>
+      <div class="num"><b data-n="57">0</b><span>lingue</span></div>
+      <div class="num"><b data-n="10">0</b><span>atmosfere animate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNZIONI -->
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Tutto il pacchetto</span><h2>Non è solo un invito.<br>È la <em class="g">regia</em> del vostro matrimonio.</h2></div>
+    <div class="feat">
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div><h3>Busta con ceralacca</h3><p>16 buste pronte con apertura video, oppure create la vostra: colore, iniziali e sigillo.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Temi video cinematografici</h3><p>Amalfi, Toscana, Capri, una navata in chiesa: 24 video verticali con i vostri nomi sopra.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>16 blocchi su misura</h3><p>Storia, countdown, luogo con mappa, programma, galleria, lista nozze, trasporti, hotel, dress code e altro.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></div><h3>Ospiti su WhatsApp</h3><p>Un link personale per ogni invitato, invio con un tocco e promemoria a chi non ha ancora risposto.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>RSVP e allergie</h3><p>Chi viene, in quanti, intolleranze, messaggi e canzoni. Tutto in un elenco, esportabile in CSV.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Budget, checklist e tavoli</h3><p>Il budget con grafico, la checklist mese per mese e i tavoli da trascinare, con il tableau pronto da stampare.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><h3>Album foto con QR</h3><p>Stampate il cartoncino per i tavoli: gli ospiti inquadrano il QR e vi mandano foto e video della festa.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3>57 lingue</h3><p>Ospiti dall'estero? L'invito si traduce da solo, anche arabo ed ebraico da destra a sinistra.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Musica, effetti e sorprese</h3><p>Musica di sottofondo, petali e lucciole, data da grattare e brindisi con fuochi d'artificio nel finale.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFRONTO -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Fate due conti</span><h2>Carta o Invitelle?</h2></div>
+    <div class="cmp rv">
+      <div class="cmp-r"><div></div><div>Partecipazioni di carta</div><div>Invitelle</div></div>
+      <div class="cmp-r"><div>Costo</div><div>di solito centinaia di euro</div><div>29,99 € una volta</div></div>
+      <div class="cmp-r"><div>Spedizione e consegna</div><div>settimane, a mano o per posta</div><div>un tocco su WhatsApp</div></div>
+      <div class="cmp-r"><div>Errore nella data o nel luogo</div><div>ristampa</div><div>lo correggete in un minuto</div></div>
+      <div class="cmp-r"><div>Conferme di presenza</div><div>telefonate e messaggi</div><div>RSVP automatico</div></div>
+      <div class="cmp-r"><div>Allergie e intolleranze</div><div class="no">da chiedere uno a uno</div><div>raccolte nel modulo</div></div>
+      <div class="cmp-r"><div>Video, musica e mappa</div><div class="no">no</div><div>sì</div></div>
+      <div class="cmp-r"><div>Budget, checklist e tavoli</div><div class="no">no</div><div>inclusi</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREZZO -->
+<section class="sec" id="prezzo" style="background:linear-gradient(var(--bg),var(--bg2))">
+  <div class="wrap offer">
+    <div class="rv">
+      <span class="eyebrow">Cosa ricevete</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px);margin:16px 0 14px">Tutto il pacchetto.<br><em class="g">Un solo prezzo.</em></h2>
+      <p style="color:var(--ink2);font-size:18px;margin:0">Niente versioni base, niente funzioni a pagamento, niente abbonamento. Pagate una volta e avete tutto.</p>
+      <ul class="incl">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Pannello su computer, telefono e app</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>24 temi video + 16 buste animate</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Busta personalizzata con sigillo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>16 blocchi, font e colori a scelta</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>RSVP con allergie e canzoni</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Ospiti illimitati e invio WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Link personalizzato dell'invito</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>57 lingue</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Budget, checklist e tavoli</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Album foto e video con QR</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Musica, atmosfere e sorprese</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Modifiche illimitate</li>
+      </ul>
+    </div>
+    <div class="pcard rv" id="pcard">
+      <img width="360" height="360" class="seal-c" src="{{ 'rosso.png' | asset_url }}" alt="">
+      <span class="tag">Offerta di lancio</span>
+      <h3>Invitelle · Pacchetto completo</h3>
+      <div class="p">29<sup>,99 €</sup></div>
+      <div class="once">pagamento unico · IVA inclusa</div>
+      <a class="btn" href="{{ inv_buy_url }}" data-checkout>Acquista e crea il tuo invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="mini">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento sicuro</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Codice subito via email</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Come funziona</span><h2>Dall'acquisto all'invio,<br>in tre passi.</h2></div>
+    <div class="how">
+      <div class="hw rv"><h3>Ricevete il codice</h3><p>Subito dopo l'acquisto vi arriva via email il vostro codice personale. Niente registrazione, niente password.</p><img width="1000" height="750" src="{{ 'step-login.webp' | asset_url }}" alt="Accesso con il codice personale" loading="lazy" style="object-position:center"></div>
+      <div class="hw rv"><h3>Create l'invito</h3><p>Scegliete tema e busta, scrivete i vostri dati, aggiungete i blocchi. Vedete tutto dal vivo mentre lo create.</p><img width="1600" height="1000" src="{{ 'd-theme.webp' | asset_url }}" alt="Scelta del tema" loading="lazy"></div>
+      <div class="hw rv"><h3>Inviatelo e rilassatevi</h3><p>Lo mandate su WhatsApp con un link personale per ogni ospite. Le risposte arrivano da sole nel pannello.</p><img width="1600" height="1000" src="{{ 'd-guests.webp' | asset_url }}" alt="Ospiti e RSVP" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Domande frequenti</span><h2>Tutto chiaro?</h2></div>
+    <div class="faq rv">
+      <details open><summary>Devo scaricare qualcosa?</summary><p>No. Invitelle funziona nel browser di computer e telefono. Se volete, potete aggiungerlo alla schermata Home e usarlo come un'app, a tutto schermo e con la sua icona.</p></details>
+      <details><summary>Come aggiungo l'app alla Home?</summary><p>Su iPhone aprite Invitelle con Safari, toccate Condividi e poi "Aggiungi alla schermata Home". Su Android aprite il menu di Chrome e toccate "Installa app" o "Aggiungi a schermata Home".</p></details>
+      <details><summary>Posso modificare l'invito dopo averlo inviato?</summary><p>Sì, quante volte volete. Il link resta lo stesso e gli ospiti vedono sempre la versione aggiornata: perfetto se cambia l'orario o vi accorgete di un errore.</p></details>
+      <details><summary>Ci sono costi nascosti o un abbonamento?</summary><p>No. 29,99 € una volta sola e avete tutto il pacchetto: temi, buste, RSVP, ospiti, lingue, album foto e pianificazione.</p></details>
+      <details><summary>Quanti ospiti posso invitare?</summary><p>Tutti quelli che volete. Potete aggiungerli uno a uno con il loro link personale, oppure condividere un unico link a tutti.</p></details>
+      <details><summary>Gli ospiti devono installare qualcosa?</summary><p>No. Toccano il link, si apre la busta e vedono l'invito. Rispondono all'RSVP direttamente dalla pagina.</p></details>
+      <details><summary>Serve essere bravi con la tecnologia?</summary><p>Per niente. Scegliete tra opzioni già pronte e scrivete i vostri dati: l'anteprima vi mostra subito il risultato. Se vi bloccate, scriveteci a invitellesupport@gmail.com.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="final">
+  <video src="{{ 'amalfi.mp4' | asset_url }}" autoplay muted loop playsinline poster="{{ 't-amalfi.webp' | asset_url }}"></video>
+  <div class="wrap">
+    <span class="eyebrow">Il primo ricordo del vostro matrimonio</span>
+    <h2>Fatelo diventare<br><em style="color:var(--gold2)">indimenticabile.</em></h2>
+    <p>Il vostro invito, i vostri ospiti, la vostra organizzazione. Tutto il pacchetto a 29,99 €.</p>
+    <a class="btn" href="#prezzo">Crea il tuo invito ora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#top"><img width="256" height="256" src="{{ 'logo-invitelle.png' | asset_url }}" alt=""><b>Invitelle</b></a>
+  Inviti di nozze digitali · <a href="mailto:invitellesupport@gmail.com">invitellesupport@gmail.com</a>
+  <div class="pol">{% for policy in shop.policies %}<a href="{{ policy.url }}">{{ policy.title }}</a>{% endfor %}</div>
+</footer>
+
+<div class="sticky" id="sticky"><div class="t">Pacchetto completo<b>29,99 €</b></div><a class="btn" href="#prezzo">Crea il tuo invito</a></div>
+
+
+</div>
+{%- if inv_variant -%}
+<form id="inv-atc" method="post" action="{{ routes.cart_add_url }}" hidden>
+  <input type="hidden" name="id" value="{{ inv_variant.id }}">
+  <input type="hidden" name="quantity" value="1">
+  <input type="hidden" name="return_to" value="/checkout">
+</form>
+{%- endif -%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="{{ 'invitelle.js' | asset_url }}" defer></script>

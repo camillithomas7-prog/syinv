@@ -1,0 +1,4 @@
+<main class="simple"><div class="wrap">
+<h1>Cerca</h1><form action="{{ routes.search_url }}"><input name="q" value="{{ search.terms | escape }}" placeholder="Cerca..."></form>
+{%- if search.performed -%}<div class="grid">{%- for r in search.results -%}<a class="card" href="{{ r.url }}">{{ r.title }}</a>{%- else -%}<p>Nessun risultato.</p>{%- endfor -%}</div>{%- endif -%}
+</div></main>

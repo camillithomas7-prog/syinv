@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code | default: 'it' }}">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fbf8f2">
+<link rel="icon" href="{{ 'logo-invitelle.png' | asset_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<title>{% if template.name == 'index' or template.name == 'product' %}Invitelle · Il tuo invito di nozze digitale, creato da te{% else %}{{ page_title }} · {{ shop.name }}{% endif %}</title>
+<meta name="description" content="{{ page_description | default: 'Il pannello completo per creare il tuo invito di nozze digitale: 24 temi video, 16 buste animate, RSVP, ospiti su WhatsApp, 57 lingue, album foto e pianificazione. Da computer, telefono o come app. 29,99 € una volta sola.' | escape }}">
+<link rel="canonical" href="{{ canonical_url }}">
+{{ 'invitelle.css' | asset_url | stylesheet_tag }}
+<script>window.INV_A = "{{ 'logo-invitelle.png' | asset_url | split: 'logo-invitelle.png' | first }}";</script>
+{{ content_for_header }}
+</head>
+<body class="tpl-{{ template.name }}">
+{%- if template.name != 'index' and template.name != 'product' -%}{% render 'inv-mini-header' %}{%- endif -%}
+{{ content_for_layout }}
+{%- if template.name != 'index' and template.name != 'product' -%}{% render 'inv-mini-footer' %}{%- endif -%}
+</body>
+</html>

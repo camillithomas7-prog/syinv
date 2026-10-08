@@ -1,0 +1,3 @@
+<footer><a class="logo" href="{{ routes.root_url }}"><img src="{{ 'logo-invitelle.png' | asset_url }}" alt="" width="34" height="34"><b>Invitelle</b></a>
+Inviti di nozze digitali · <a href="mailto:invitellesupport@gmail.com">invitellesupport@gmail.com</a>
+<div class="pol">{% for policy in shop.policies %}<a href="{{ policy.url }}">{{ policy.title }}</a>{% endfor %}</div></footer>

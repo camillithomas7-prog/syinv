@@ -1,0 +1,6 @@
+{% layout none %}
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Carta regalo · {{ shop.name }}</title>
+{{ 'invitelle.css' | asset_url | stylesheet_tag }}{{ content_for_header }}</head>
+<body><main class="simple" style="text-align:center"><div class="wrap"><h1>La tua carta regalo</h1>
+<p style="font-size:32px">{{ gift_card.balance | money }}</p><p>Codice: <b>{{ gift_card.code | format_code }}</b></p>
+<a class="btn" href="{{ shop.url }}">Vai al negozio</a></div></main></body></html>

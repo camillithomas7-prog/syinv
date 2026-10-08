@@ -1,8 +1,8 @@
-# Invitelle · Pagina prodotto del pannello
+# syinv · Tema Shopify Invitelle
 
-Pagina di vendita del pannello Invitelle (pacchetto completo 29,99 €), statica: `index.html` + `img/` + `video/`.
-Screenshot reali del pannello (desktop e mobile) e video originali di temi e buste.
+Tema generato da `~/invitelle-pannello-page/build_shopify.py` (sorgente: `index.html` della pagina prodotto).
+Non modificare a mano: cambia la pagina sorgente, rilancia lo script, poi commit + push.
 
-Anteprima locale: `python3 -m http.server 8487` → http://localhost:8487
-
-Da collegare: link checkout sul pulsante "Acquista" (`#acquista`, attributo `data-checkout`).
+- Home e pagina prodotto = la landing Invitelle (sezione `invitelle-landing`).
+- In home il prodotto da comprare si sceglie nell'editor tema (impostazione della sezione) o col prodotto di handle `invitelle`.
+- Il pulsante "Acquista" aggiunge il prodotto al carrello e porta dritto al checkout.

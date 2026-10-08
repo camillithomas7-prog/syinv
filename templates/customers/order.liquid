@@ -1,0 +1,3 @@
+<main class="simple"><div class="wrap">
+<h1>Ordine {{ order.name }}</h1><table>{%- for l in order.line_items -%}<tr><td>{{ l.title }}</td><td>{{ l.final_line_price | money }}</td></tr>{%- endfor -%}</table><p><b>Totale: {{ order.total_price | money }}</b></p>
+</div></main>

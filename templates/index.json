@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "invitelle-landing",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
