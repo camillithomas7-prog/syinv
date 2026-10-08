@@ -1,10 +1,17 @@
-<main class="simple"><div class="wrap">
-<h1>Il tuo carrello</h1>
-{%- if cart.item_count > 0 -%}
-<form action="{{ routes.cart_url }}" method="post">
-<table>{%- for item in cart.items -%}<tr><td>{{ item.product.title }}</td><td>{{ item.final_line_price | money }}</td><td><a href="{{ item.url_to_remove }}">Rimuovi</a></td></tr>{%- endfor -%}</table>
-<p style="font-size:20px;margin:24px 0"><b>Totale: {{ cart.total_price | money }}</b></p>
-<button class="btn" type="submit" name="checkout">Vai al pagamento</button>
-</form>
-{%- else -%}<p>Il carrello è vuoto.</p><a class="btn" href="{{ routes.root_url }}#prezzo">Scopri Invitelle</a>{%- endif -%}
-</div></main>
+<div class="ic icp">
+  <header class="icp-hd"><div class="in"><a class="lg" href="{{ routes.root_url }}"><img src="{{ 'logo-invitelle.png' | asset_url }}" alt="" width="32" height="32"><b>Invitelle</b></a>
+    <span class="sec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Pagamento sicuro</span></span></div></header>
+  <div id="inv-cart-page" data-home="{{ routes.root_url }}">
+    <noscript><div class="icp-main">
+      {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post">{%- for item in cart.items -%}<p>{{ item.product.title }} · {{ item.final_line_price | money }}</p>{%- endfor -%}
+      <p><b>Totale: {{ cart.total_price | money }}</b></p><button class="ic-btn" type="submit" name="checkout">Vai al pagamento</button></form>
+      {%- else -%}<p>Il carrello è vuoto.</p>{%- endif -%}
+    </div></noscript>
+  </div>
+  <footer class="icp-ft">Invitelle · Inviti di nozze digitali · <a href="mailto:invitellesupport@gmail.com">invitellesupport@gmail.com</a>
+    <div class="pol">{% for policy in shop.policies %}<a href="{{ policy.url }}">{{ policy.title }}</a>{% endfor %}</div></footer>
+</div>
+<script type="application/json" id="inv-cart-data">{{ cart | json }}</script>
+<div id="inv-pay" hidden>{%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag }}{%- endfor -%}</div>
+<script src="{{ 'inv-cart.js' | asset_url }}" defer></script>

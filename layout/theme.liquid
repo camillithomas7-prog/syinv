@@ -12,12 +12,13 @@
 <meta name="description" content="{{ page_description | default: 'Il pannello completo per creare il tuo invito di nozze digitale: 24 temi video, 16 buste animate, RSVP, ospiti su WhatsApp, 57 lingue, album foto e pianificazione. Da computer, telefono o come app. 29,99 € una volta sola.' | escape }}">
 <link rel="canonical" href="{{ canonical_url }}">
 {{ 'invitelle.css' | asset_url | stylesheet_tag }}
+{{ 'inv-cart.css' | asset_url | stylesheet_tag }}
 <script>window.INV_A = "{{ 'logo-invitelle.png' | asset_url | split: 'logo-invitelle.png' | first }}";</script>
 {{ content_for_header }}
 </head>
 <body class="tpl-{{ template.name }}">
-{%- if template.name != 'index' and template.name != 'product' -%}{% render 'inv-mini-header' %}{%- endif -%}
+{%- if template.name != 'index' and template.name != 'product' and template.name != 'cart' -%}{% render 'inv-mini-header' %}{%- endif -%}
 {{ content_for_layout }}
-{%- if template.name != 'index' and template.name != 'product' -%}{% render 'inv-mini-footer' %}{%- endif -%}
+{%- if template.name != 'index' and template.name != 'product' and template.name != 'cart' -%}{% render 'inv-mini-footer' %}{%- endif -%}
 </body>
 </html>

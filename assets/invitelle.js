@@ -13,10 +13,12 @@ $('#mq1').innerHTML = (T.map(t => fig('t', t)).join('')).repeat(2);
 $('#mq2').innerHTML = (E.map(e => fig('e', e)).join('')).repeat(2);
 $('#mq2').querySelectorAll('figure').forEach(f => f.style.aspectRatio = '1/1');
 
-/* acquisto diretto */
+/* acquisto: aggiunge al carrello e apre il pannello */
 $$('[data-checkout]').forEach(a => a.addEventListener('click', e => {
-  const f = document.getElementById('inv-atc'); if (!f) return;
-  e.preventDefault(); a.classList.add('busy'); f.submit();
+  e.preventDefault();
+  const f = document.getElementById('inv-atc');
+  if (window.InvCart) InvCart.add(f ? f.querySelector('[name=id]').value : 1, a);
+  else if (f) f.submit();
 }));
 /* header */
 addEventListener('scroll', () => {

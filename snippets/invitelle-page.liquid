@@ -10,6 +10,7 @@
   <div class="wrap">
     <a class="logo" href="#top"><img width="256" height="256" src="{{ 'logo-invitelle.png' | asset_url }}" alt=""><b>Invitelle</b></a>
     <nav><a href="#schermi">Desktop e app</a><a href="#ospiti">Gli ospiti</a><a href="#pannello">Il pannello</a><a href="#prezzo">Prezzo</a><a href="#faq">Domande</a></nav>
+    <button type="button" class="bag" data-cart-open aria-label="Apri il carrello"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.2 13H4.8z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg><span data-cart-count hidden>0</span></button>
     <a class="btn" href="#prezzo">Crea il tuo invito</a>
   </div>
 </header>
@@ -278,4 +279,6 @@
 {%- endif -%}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<div id="inv-pay" hidden>{%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag }}{%- endfor -%}</div>
+<script src="{{ 'inv-cart.js' | asset_url }}" defer></script>
 <script src="{{ 'invitelle.js' | asset_url }}" defer></script>

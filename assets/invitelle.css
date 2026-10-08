@@ -46,6 +46,11 @@ em.g{font-style:italic;color:var(--brand)}
 .hdr nav a{text-decoration:none}
 .hdr nav a:hover{color:var(--brand)}
 .hdr .btn{padding:11px 20px;font-size:14px}
+.btn.busy{opacity:.7;pointer-events:none}
+.bag{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);display:grid;place-items:center;cursor:pointer;color:var(--ink);flex:none}
+.bag svg{width:20px;height:20px}
+.bag span[hidden]{display:none}
+.bag span{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--brand);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;box-shadow:0 0 0 2px var(--bg)}
 
 /* HERO */
 .hero{position:relative;padding:70px 0 40px;overflow:hidden}
@@ -287,10 +292,11 @@ footer .logo{justify-content:center;margin-bottom:10px}
   .nums{grid-template-columns:repeat(3,1fr)}
   .feat{grid-template-columns:1fr 1fr}
   .hdr nav{display:none}
-  .hdr .btn{margin-left:auto}
+  .hdr .bag{margin-left:auto}
 }
 @media (max-width:700px){
   .wrap{padding:0 16px}
+  .hdr .wrap{gap:10px}.hdr .btn{padding:10px 15px;font-size:13.5px}.logo b{font-size:21px}.bag{width:40px;height:40px}
   .sec{padding:80px 0}
   .sec-h{margin-bottom:44px}
   .sec-h p{font-size:16px}
