@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Invitelle · Il tuo invito di nozze digitale, creato da te</title>
+<meta name="description" content="Il pannello completo per creare il tuo invito di nozze digitale: 24 temi video, 16 buste animate, RSVP, ospiti su WhatsApp, 57 lingue, album foto e pianificazione. Da computer, telefono o come app. 29,99 € una volta sola.">
+<meta name="theme-color" content="#fbf8f2">
+<link rel="icon" href="img/logo-invitelle.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+:root{
+  --bg:#fbf8f2; --bg2:#f4ede3; --card:#fffdf9; --ink:#2b2522; --ink2:#5a4f48; --mute:#8a7f76; --line:#e8dfd4;
+  --brand:#7a2331; --brand2:#962c3d; --brand-soft:#f5e9ea; --gold:#a8864f; --gold2:#c9a96e; --ok:#2e8b57;
+  --r:18px; --shadow:0 30px 80px -30px rgba(60,30,20,.35),0 10px 30px -15px rgba(60,30,20,.2);
+  --serif:'Playfair Display',Georgia,serif; --serif2:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em}
+em.g{font-style:italic;color:var(--brand)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}
+.sec{padding:120px 0;position:relative}
+.sec-h{max-width:760px;margin:0 auto 64px;text-align:center}
+.sec-h h2{font-size:clamp(34px,5vw,58px);margin:16px 0 18px}
+.sec-h p{color:var(--ink2);font-size:18px;margin:0}
+
+/* bottoni */
+.btn{--b:var(--brand);display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 30px;border-radius:999px;background:var(--b);color:#fff;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;box-shadow:0 14px 30px -12px rgba(122,35,49,.6)}
+.btn:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.6s ease-in-out infinite}
+@keyframes shine{0%,55%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(122,35,49,.7)}
+.btn svg{width:18px;height:18px}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost:after{display:none}
+
+/* barra annuncio */
+.ann{background:var(--ink);color:#f3e7d6;font-size:13px;text-align:center;padding:10px 16px;letter-spacing:.02em}
+.ann b{color:var(--gold2);font-weight:600}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.sc{border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:34px;height:34px}
+.logo b{font-family:var(--serif);font-size:23px;font-weight:500}
+.hdr nav{display:flex;gap:28px;margin-left:auto;font-size:14px;color:var(--ink2)}
+.hdr nav a{text-decoration:none}
+.hdr nav a:hover{color:var(--brand)}
+.hdr .btn{padding:11px 20px;font-size:14px}
+
+/* HERO */
+.hero{position:relative;padding:70px 0 40px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(60% 50% at 75% 40%,rgba(201,169,110,.28),transparent 70%),radial-gradient(40% 40% at 15% 20%,rgba(122,35,49,.10),transparent 70%);pointer-events:none}
+#petals{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero-g{display:grid;grid-template-columns:1fr 1.12fr;grid-template-rows:1fr auto auto auto auto 1fr;column-gap:40px;align-items:start;position:relative;z-index:2}
+.h-top{grid-column:1;grid-row:2}.h-chips{grid-column:1;grid-row:3}.h-cta{grid-column:1;grid-row:4}.h-trust{grid-column:1;grid-row:5}
+.stage-box{grid-column:2;grid-row:1/7}
+.hero h1{font-size:clamp(42px,6vw,76px);margin:20px 0 22px}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .l span{display:block}
+.hero .lead{font-size:19px;color:var(--ink2);max-width:520px;margin:0 0 28px}
+.devices-chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:14px;font-weight:500}
+.chip svg{width:17px;height:17px;color:var(--brand)}
+.cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.price-inline{display:flex;flex-direction:column;line-height:1.2}
+.price-inline b{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink)}
+.price-inline small{color:var(--mute);font-size:13px}
+.trust{display:flex;gap:10px 22px;margin-top:28px;color:var(--mute);font-size:13px;flex-wrap:wrap}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust svg{width:16px;height:16px;color:var(--gold)}
+
+/* scena 3D hero: composizione fissa 640x600 scalata intera (niente tagli su nessuno schermo) */
+.stage-box{position:relative;width:100%;height:calc(600px * var(--s,1))}
+.stage-box .glow{position:absolute;left:8%;right:4%;top:14%;bottom:6%;background:radial-gradient(closest-side,rgba(201,169,110,.38),rgba(122,35,49,.08) 60%,transparent);filter:blur(10px);pointer-events:none}
+.stage{position:absolute;left:50%;top:0;width:640px;height:600px;margin-left:-320px;transform:scale(var(--s,1));transform-origin:top center;perspective:2200px;perspective-origin:50% 40%}
+.scene{position:absolute;inset:0;transform-style:preserve-3d}
+.laptop{position:absolute;left:30px;top:90px;width:580px;transform-style:flat;transform:rotateY(-16deg) rotateX(6deg) translateZ(-160px)}
+.lid{position:relative;background:#1a1716;border-radius:18px 18px 6px 6px;padding:12px 12px 16px;box-shadow:var(--shadow);transform-origin:bottom center}
+.lid:before{content:"";position:absolute;top:5px;left:50%;width:5px;height:5px;border-radius:50%;background:#3a3532;transform:translateX(-50%)}
+.lid .scr{border-radius:6px;overflow:hidden;aspect-ratio:16/10;background:#fff;position:relative}
+.lid .scr img{width:100%;height:100%;object-fit:cover;object-position:top}
+.lid .scr:after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.22),transparent 35%);pointer-events:none}
+.base{height:16px;margin:0 -40px;background:linear-gradient(#e2dcd5,#a9a29b);border-radius:0 0 22px 22px;transform:rotateX(60deg);transform-origin:top;box-shadow:0 30px 40px -10px rgba(0,0,0,.35)}
+.base:before{content:"";display:block;width:110px;height:6px;margin:0 auto;background:#8f8881;border-radius:0 0 8px 8px}
+.phone{position:absolute;width:250px;aspect-ratio:9/19.5;background:#141110;border-radius:42px;padding:10px;box-shadow:var(--shadow),inset 0 0 0 2px #3a332f;transform-style:preserve-3d}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:33px;overflow:hidden;background:#fff}
+.phone .scr img,.phone .scr video{width:100%;height:100%;object-fit:cover;object-position:top}
+.phone .island{position:absolute;top:18px;left:50%;width:76px;height:22px;border-radius:20px;background:#000;transform:translateX(-50%);z-index:5}
+.phone .scr:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.18),transparent 30%);pointer-events:none;z-index:4}
+.ph-a{left:0;top:196px;width:196px;border-radius:34px;padding:8px;transform:translateZ(120px) rotateY(10deg) rotateZ(-3deg)}
+.ph-a .scr{border-radius:27px}.ph-a .island{width:58px;height:17px;top:14px}
+.ph-b{right:0;top:34px;width:230px;transform:translateZ(70px) rotateY(-16deg) rotateZ(2deg)}
+.inv-over{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;padding-top:62px;color:#fff;text-align:center;font-family:var(--serif);text-shadow:0 2px 18px rgba(0,0,0,.45)}
+.inv-over .n{font-size:30px;line-height:1.05;letter-spacing:.04em;text-transform:uppercase}
+.inv-over .d{font-family:var(--serif2);font-size:15px;letter-spacing:.18em;margin-top:10px;text-transform:uppercase}
+.seal3d{position:absolute;width:104px;height:104px;left:236px;top:452px;transform:translateZ(200px);filter:drop-shadow(0 22px 22px rgba(80,10,20,.35));animation:float 6s ease-in-out infinite}
+.seal3d img{width:100%;height:100%;animation:spin 7s ease-in-out infinite}
+@keyframes spin{0%,100%{transform:rotateY(-28deg) rotateZ(-6deg)}50%{transform:rotateY(28deg) rotateZ(6deg)}}
+@keyframes float{50%{translate:0 -12px}}
+.badge3d{position:absolute;z-index:3;background:rgba(255,253,249,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:11px 15px;box-shadow:var(--shadow);font-size:13px;line-height:1.35;display:flex;align-items:center;gap:12px;animation:float 7s ease-in-out infinite;white-space:nowrap}
+.badge3d b{display:block;font-size:14.5px}
+.badge3d .ic{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;flex:none}
+.badge3d .ic svg{width:19px;height:19px}
+.bd-1{left:30%;top:2%;animation-delay:-2s}
+.bd-2{right:2%;bottom:4%;animation-delay:-4s}
+
+/* marquee temi */
+.marq{padding:40px 0 30px;overflow:hidden;position:relative}
+.marq-in{-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marq-t{display:flex;gap:16px;width:max-content;animation:marq 70s linear infinite}
+.marq-t.rev{animation-direction:reverse;animation-duration:80s;margin-top:16px}
+.marq figure{margin:0;width:150px;flex:none;border-radius:14px;overflow:hidden;position:relative;aspect-ratio:9/14;box-shadow:0 12px 30px -16px rgba(60,30,20,.5)}
+.marq.env figure{aspect-ratio:1/1;width:170px}
+.marq figure img{width:100%;height:100%;object-fit:cover}
+.marq figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 10px 9px;color:#fff;font-family:var(--serif);font-size:13px;background:linear-gradient(transparent,rgba(0,0,0,.6))}
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq-lbl{text-align:center;color:var(--mute);font-size:14px;margin:0 auto 22px;padding:0 16px}
+.marq-lbl b{color:var(--ink)}
+
+/* tre schermi (pinned) */
+.three{background:linear-gradient(var(--bg),var(--bg2) 20%,var(--bg2) 80%,var(--bg))}
+.three-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;min-height:100vh}
+.steps3{display:flex;flex-direction:column;gap:14px}
+.s3{padding:26px 28px;border-radius:var(--r);border:1px solid transparent;transition:all .5s;opacity:.45;cursor:pointer}
+.s3.on{opacity:1;background:var(--card);border-color:var(--line);box-shadow:var(--shadow)}
+.s3 .k{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.s3 .k svg{width:22px;height:22px;color:var(--brand)}
+.s3 h3{font-size:28px;margin:10px 0 8px}
+.s3 p{margin:0;color:var(--ink2)}
+.s3 .bar{height:2px;background:var(--line);margin-top:18px;border-radius:2px;overflow:hidden}
+.s3 .bar i{display:block;height:100%;width:0;background:var(--brand)}
+.stage3{position:relative;height:640px;perspective:2000px}
+.dv{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d;opacity:0;pointer-events:none}
+.dv.d1 .laptop{position:relative;left:auto;top:auto;width:600px;transform:none}
+.dv .phone{position:relative;right:auto;top:auto;transform:none;width:280px}
+.home{width:290px;aspect-ratio:9/19.5;border-radius:44px;background:#141110;padding:10px;box-shadow:var(--shadow),inset 0 0 0 2px #3a332f;position:relative}
+.home .scr{width:100%;height:100%;border-radius:35px;overflow:hidden;position:relative;background:url(img/t-amalfi.webp) center/cover}
+.home .scr:before{content:"";position:absolute;inset:0;background:rgba(30,20,15,.25);backdrop-filter:blur(2px)}
+.home .time{position:relative;text-align:center;color:#fff;padding-top:54px;font-weight:600;font-size:15px}
+.apps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px 12px;padding:28px 18px}
+.app{display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff;font-size:10px}
+.app i{width:52px;height:52px;border-radius:14px;display:block;background:rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+.app.inv i{background:url(img/app-icon-512.png) center/cover;box-shadow:0 0 0 0 rgba(201,169,110,.9);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 14px rgba(201,169,110,0)}100%{box-shadow:0 0 0 0 rgba(201,169,110,0)}}
+.dock{position:absolute;left:14px;right:14px;bottom:14px;height:74px;border-radius:26px;background:rgba(255,255,255,.25);backdrop-filter:blur(14px);display:flex;justify-content:space-around;align-items:center}
+.dock i{width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.35)}
+.splash{position:absolute;inset:0;background:var(--bg);display:grid;place-items:center;z-index:3;clip-path:circle(0% at 37% 31%)}
+.splash img{width:86px}
+.appview{position:absolute;inset:0;z-index:4;opacity:0}
+.appview img{width:100%;height:100%;object-fit:cover;object-position:top}
+.hand-note{position:absolute;right:-10px;top:120px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:13px;box-shadow:var(--shadow);max-width:190px;line-height:1.4}
+.hand-note b{display:block;font-family:var(--serif);font-size:15px;margin-bottom:2px}
+
+/* ESPERIENZA OSPITE */
+.guest{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.guest .phone{position:relative;right:auto;top:auto;transform:none;width:300px;margin:0 auto}
+.guest-stage{position:relative;display:grid;place-items:center;perspective:1600px}
+.env-ph{transform:rotateY(10deg) rotateX(4deg);transition:transform .6s}
+.env-ph:hover{transform:rotateY(0) rotateX(0)}
+.tap{position:absolute;left:50%;bottom:22%;transform:translateX(-50%);z-index:6;background:rgba(255,255,255,.88);border:0;border-radius:999px;padding:11px 20px;font-family:var(--serif2);letter-spacing:.2em;font-size:13px;text-transform:uppercase;color:var(--ink);cursor:pointer;animation:float 3s ease-in-out infinite;white-space:nowrap}
+.env-ph .layer{position:absolute;inset:0;transition:opacity .8s}
+.env-ph .layer.hide{opacity:0;pointer-events:none}
+.env-pick{display:flex;gap:10px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.env-pick button{width:58px;height:58px;border-radius:14px;border:2px solid transparent;padding:0;overflow:hidden;cursor:pointer;background:none;box-shadow:0 6px 16px -8px rgba(0,0,0,.4)}
+.env-pick button.on{border-color:var(--brand)}
+.env-pick img{width:100%;height:100%;object-fit:cover}
+.glist{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:18px}
+.glist li{display:flex;gap:16px}
+.glist .n{flex:none;width:36px;height:36px;border-radius:50%;background:var(--brand-soft);color:var(--brand);font-family:var(--serif);display:grid;place-items:center;font-size:16px}
+.glist b{display:block;font-size:17px}
+.glist span{color:var(--ink2);font-size:15px}
+.scroller{position:absolute;inset:0;overflow:hidden}
+.scroller img{width:100%;height:auto;max-width:none;animation:scrollinv 48s linear infinite alternate;object-fit:unset}
+@keyframes scrollinv{0%,4%{transform:translateY(0)}96%,100%{transform:translateY(calc(-100% + 560px))}}
+
+/* SHOWCASE schede */
+.show{background:var(--ink);color:#f5ece0;overflow:hidden}
+.show .sec-h p{color:#cbbfb0}
+.show .eyebrow{color:var(--gold2)}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:46px}
+.tabs button{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e9dfd2;padding:10px 18px;border-radius:999px;font:500 14px var(--sans);cursor:pointer;transition:.25s}
+.tabs button.on{background:#f5ece0;color:var(--ink);border-color:#f5ece0}
+.show-stage{position:relative;display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:end;perspective:2000px}
+.browser{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 40px 100px -30px rgba(0,0,0,.7);transform:rotateX(4deg);transform-origin:bottom}
+.browser .bar{height:38px;background:#ece6de;display:flex;align-items:center;gap:7px;padding:0 14px}
+.browser .bar i{width:11px;height:11px;border-radius:50%;background:#d4ccc2}
+.browser .bar i:nth-child(1){background:#ee6a5f}.browser .bar i:nth-child(2){background:#f5bd4f}.browser .bar i:nth-child(3){background:#61c454}
+.browser .bar span{margin:0 auto;background:#fff;border-radius:7px;padding:4px 60px;font-size:12px;color:#8a7f76}
+.browser .view{aspect-ratio:16/10;position:relative;overflow:hidden}
+.browser .view img,.show .phone .scr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transition:opacity .5s,transform .7s;transform:scale(1.02)}
+.browser .view img.on,.show .phone .scr img.on{opacity:1;transform:none}
+.show .phone{position:relative;right:auto;top:auto;width:280px;transform:translateY(40px) rotateY(-8deg);box-shadow:0 40px 100px -30px rgba(0,0,0,.8),inset 0 0 0 2px #4a423d}
+.show-desc{text-align:center;max-width:720px;margin:56px auto 0;min-height:84px}
+.show-desc h3{font-size:28px;color:#fff;margin-bottom:8px}
+.show-desc p{color:#cbbfb0;margin:0}
+
+/* numeri */
+.nums{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.num{text-align:center;padding:30px 10px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.num b{display:block;font-family:var(--serif);font-size:54px;font-weight:500;color:var(--brand);line-height:1}
+.num span{display:block;margin-top:10px;color:var(--ink2);font-size:14px}
+
+/* funzioni */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .35s,box-shadow .35s;transform-style:preserve-3d}
+.fc:hover{box-shadow:var(--shadow)}
+.fc .ic{width:50px;height:50px;border-radius:14px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center;margin-bottom:20px}
+.fc .ic svg{width:24px;height:24px}
+.fc h3{font-size:22px;margin-bottom:8px}
+.fc p{margin:0;color:var(--ink2);font-size:15px}
+
+/* confronto */
+.cmp{max-width:900px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}
+.cmp-r{display:grid;grid-template-columns:1.4fr 1fr 1fr;border-top:1px solid var(--line)}
+.cmp-r:first-child{border-top:0;background:var(--bg2);font-weight:600}
+.cmp-r>div{padding:17px 22px;font-size:15px;display:flex;align-items:center;gap:8px}
+.cmp-r>div:nth-child(3){background:rgba(122,35,49,.05);font-weight:600;color:var(--brand)}
+.cmp-r:first-child>div:nth-child(3){background:var(--brand);color:#fff;font-family:var(--serif);font-size:18px}
+.cmp svg{width:18px;height:18px;flex:none}
+.no{color:#b5a9a0}
+
+/* offerta */
+.offer{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.incl{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 22px}
+.incl li{display:flex;gap:10px;font-size:15px;align-items:flex-start}
+.incl svg{width:20px;height:20px;color:var(--ok);flex:none;margin-top:2px}
+.pcard{position:relative;border-radius:28px;padding:42px 38px;background:linear-gradient(160deg,#fffdf9,#f6eee2);border:1px solid var(--line);box-shadow:var(--shadow);text-align:center;transform-style:preserve-3d;overflow:hidden}
+.pcard:before{content:"";position:absolute;inset:-1px;border-radius:28px;padding:1.5px;background:conic-gradient(from var(--a,0deg),transparent 0 60%,var(--gold2) 75%,var(--brand) 85%,transparent 95%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:rot 5s linear infinite}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes rot{to{--a:360deg}}
+.pcard .tag{display:inline-block;background:var(--brand);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;font-weight:600}
+.pcard h3{font-size:30px;margin:20px 0 6px}
+.pcard .p{font-family:var(--serif);font-size:76px;font-weight:600;line-height:1;margin:18px 0 4px;color:var(--ink)}
+.pcard .p sup{font-size:34px;vertical-align:top;margin-left:2px}
+.pcard .once{color:var(--mute);font-size:14px;margin-bottom:26px}
+.pcard .btn{width:100%;padding:21px;font-size:17px}
+.pcard .mini{display:flex;justify-content:center;gap:18px;margin-top:20px;color:var(--mute);font-size:13px;flex-wrap:wrap}
+.pcard .mini span{display:flex;align-items:center;gap:6px}
+.pcard .mini svg{width:15px;height:15px;color:var(--gold)}
+.pcard .seal-c{position:absolute;right:-28px;top:-28px;width:120px;opacity:.95;transform:rotate(18deg)}
+
+/* come funziona */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:s}
+.hw{position:relative;padding:34px 30px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.hw:before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--serif);font-size:56px;color:var(--gold2);opacity:.5;line-height:1;display:block;margin-bottom:12px}
+.hw h3{font-size:22px;margin-bottom:8px}
+.hw p{margin:0;color:var(--ink2);font-size:15px}
+.hw img{margin-top:20px;border-radius:12px;border:1px solid var(--line);aspect-ratio:4/3;object-fit:cover;object-position:top;width:100%}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto}
+.faq details{border-bottom:1px solid var(--line);padding:22px 4px}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:21px;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-family:var(--sans);font-weight:300;font-size:28px;line-height:1;color:var(--brand);transition:transform .3s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq p{color:var(--ink2);margin:12px 0 0}
+
+/* finale */
+.final{position:relative;overflow:hidden;text-align:center;padding:140px 0;background:var(--ink);color:#f5ece0}
+.final video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.final .wrap{position:relative}
+.final h2{font-size:clamp(38px,6vw,72px);margin:16px 0 20px;color:#fff}
+.final p{color:#e3d6c6;font-size:19px;max-width:560px;margin:0 auto 34px}
+.final .eyebrow{color:var(--gold2)}
+footer{padding:40px 0 110px;color:var(--mute);font-size:13px;text-align:center}
+footer .logo{justify-content:center;margin-bottom:10px}
+
+/* barra fissa */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:rgba(255,253,249,.94);backdrop-filter:blur(12px);box-shadow:0 18px 40px -12px rgba(0,0,0,.35);border:1px solid var(--line);transform:translateY(140%);transition:transform .4s}
+.sticky.show{transform:none}
+.sticky .t{line-height:1.2;font-size:12px;color:var(--mute)}
+.sticky .t b{display:block;font-family:var(--serif);font-size:20px;color:var(--ink)}
+.sticky .btn{margin-left:auto;padding:13px 22px;font-size:15px}
+
+.rv{opacity:0;transform:translateY(40px)}
+.no-js .rv{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .three-grid,.guest,.offer{grid-template-columns:1fr}
+  .hero-g{grid-template-columns:1fr;grid-template-rows:none;max-width:680px}
+  .h-top,.h-chips,.h-cta,.h-trust,.stage-box{grid-column:1;grid-row:auto}
+  .h-top{order:1}.h-cta{order:2}.stage-box{order:3;margin:40px 0 10px}.h-chips{order:4;justify-content:center;margin:22px 0 0}.h-trust{order:5;justify-content:center}
+  .stage3{height:600px}
+  .show-stage{grid-template-columns:1fr}
+  .show-stage>.phone{display:none}
+  .nums{grid-template-columns:repeat(3,1fr)}
+  .feat{grid-template-columns:1fr 1fr}
+  .hdr nav{display:none}
+  .hdr .btn{margin-left:auto}
+}
+@media (max-width:700px){
+  .wrap{padding:0 16px}
+  .sec{padding:80px 0}
+  .sec-h{margin-bottom:44px}
+  .sec-h p{font-size:16px}
+  .hero{padding:26px 0 10px}
+  .hero h1{margin:14px 0 14px;font-size:44px}
+  .hero .lead{font-size:16.5px;margin-bottom:22px}
+  .h-cta{gap:14px;flex-wrap:nowrap}.h-cta .btn{flex:1;padding:17px 16px;white-space:nowrap;font-size:15.5px}.price-inline small{font-size:11.5px}
+  .price-inline b{font-size:26px}
+  .stage-box{margin:46px -16px 0;width:calc(100% + 32px)}
+  .badge3d{padding:8px 11px;font-size:11px;gap:9px;border-radius:13px}
+  .badge3d b{font-size:12.5px}.badge3d .ic{width:28px;height:28px;border-radius:9px}.badge3d .ic svg{width:15px;height:15px}
+  .bd-1{left:3%;top:-3%}.bd-2{right:3%;bottom:-1%}
+  .h-chips{gap:8px}.chip{padding:7px 12px;font-size:13px}
+  .trust{font-size:12px;gap:8px 16px;margin-top:18px}
+  .marq figure{width:110px}.marq.env figure{width:120px}
+  .three-grid{min-height:auto;gap:24px}
+  .stage3{height:470px;order:-1}
+  .dv.d1 .laptop{width:340px}
+  .dv .phone{width:210px}
+  .home{width:215px;border-radius:34px;padding:7px}
+  .home .scr{border-radius:28px}
+  .apps{gap:12px 8px;padding:20px 12px}.app i{width:38px;height:38px;border-radius:11px}.app{font-size:8px}
+  .home .time{padding-top:38px}
+  .dock{height:56px;border-radius:20px}.dock i{width:38px;height:38px;border-radius:11px}
+  .hand-note{display:none}
+  .s3{padding:16px 18px;display:none}.s3.on{display:block}.s3 h3{font-size:21px}.s3 p{font-size:14px}
+  .guest .phone{width:250px}
+  .show-desc{margin-top:34px}
+  .show-stage{display:flex;justify-content:center}
+  .show .browser{display:none}
+  .show-stage>.phone{display:block;width:min(300px,78vw);transform:none}
+  .feat{gap:12px}
+  .fc{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:20px 18px}
+  .fc .ic{width:44px;height:44px;margin:0;grid-row:span 2;border-radius:12px}
+  .fc h3{font-size:19px;margin-bottom:4px;align-self:center}
+  .fc p{font-size:14px}
+  .offer{gap:36px}
+  .offer .pcard{order:-1}
+  .browser .bar span{padding:3px 20px}
+  .nums{grid-template-columns:1fr 1fr}.num:last-child{grid-column:span 2}
+  .num b{font-size:42px}
+  .feat,.how{grid-template-columns:1fr}
+  .incl{grid-template-columns:1fr}
+  .cmp-r>div{padding:13px 12px;font-size:13px}
+  .cmp-r:first-child>div:nth-child(3){font-size:15px}
+  .pcard{padding:34px 22px}
+  .pcard .p{font-size:64px}
+  .final{padding:100px 0}
+  .sticky{display:flex}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="ann">Offerta di lancio · <b>tutto il pacchetto a 29,99 €</b> · pagamento unico, nessun abbonamento</div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/logo-invitelle.png" alt=""><b>Invitelle</b></a>
+    <nav><a href="#schermi">Desktop e app</a><a href="#ospiti">Gli ospiti</a><a href="#pannello">Il pannello</a><a href="#prezzo">Prezzo</a><a href="#faq">Domande</a></nav>
+    <a class="btn" href="#prezzo">Crea il tuo invito</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="petals"></canvas>
+  <div class="wrap hero-g">
+    <div class="h-top">
+      <span class="eyebrow h-in">Inviti di nozze digitali</span>
+      <h1><span class="l"><span>Il vostro invito,</span></span><span class="l"><span>creato da voi.</span></span><span class="l"><span><em class="g">In una sera.</em></span></span></h1>
+      <p class="lead h-in">Video cinematografici, busta con ceralacca che si apre, RSVP e ospiti su WhatsApp. Tutto in un unico pannello, da computer, telefono o come app.</p>
+    </div>
+    <div class="h-chips devices-chips h-in">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M1 20h22"/></svg>Computer</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Telefono</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg>App sulla Home</span>
+    </div>
+    <div class="h-cta cta-row h-in">
+      <a class="btn" href="#prezzo">Voglio il mio invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="price-inline"><b>29,99 €</b><small>una volta sola, tutto incluso</small></div>
+    </div>
+    <div class="h-trust trust h-in">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Codice subito via email</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Modifiche illimitate</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>57 lingue</span>
+    </div>
+
+    <div class="stage-box" id="stageBox">
+      <div class="glow"></div>
+      <div class="stage" id="stage">
+        <div class="scene" id="scene">
+          <div class="laptop"><div class="lid"><div class="scr"><img src="img/d-envelope.webp" alt="Pannello Invitelle su computer: scelta della busta" fetchpriority="high"></div></div><div class="base"></div></div>
+          <div class="phone ph-b"><div class="island"></div><div class="scr"><video src="video/chiesa.mp4" poster="img/t-chiesa.webp" autoplay muted loop playsinline></video><div class="inv-over"><div class="n">Stefania<br>&amp;<br>Angelo</div><div class="d">19 giugno 2027</div></div></div></div>
+          <div class="phone ph-a"><div class="island"></div><div class="scr"><img src="img/m-theme.webp" alt="Pannello Invitelle sul telefono: scelta del tema"></div></div>
+          <div class="seal3d"><img src="img/rosso.png" alt=""></div>
+        </div>
+      </div>
+      <div class="badge3d bd-1"><span class="ic" style="background:#e6f4ea;color:#2e8b57"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Zia Carla ha risposto</b>Partecipa · senza lattosio</div></div>
+      <div class="badge3d bd-2"><span class="ic" style="background:var(--brand-soft);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/><circle cx="9" cy="7" r="4"/></svg></span><div><b>11 persone confermate</b>in tempo reale</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMI -->
+<section class="marq" aria-label="Temi video">
+  <div class="marq-lbl"><b>24 temi video cinematografici</b> e <b>16 buste animate</b>, già pronti da scegliere</div>
+  <div class="marq-in"><div class="marq-t" id="mq1"></div><div class="marq-t rev" id="mq2"></div></div>
+</section>
+
+<!-- TRE SCHERMI -->
+<section class="sec three" id="schermi">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Ovunque siate</span>
+      <h2>Un solo invito.<br><em class="g">Tre modi</em> per crearlo.</h2>
+      <p>Iniziate sul computer in ufficio, continuate dal divano col telefono. Ogni modifica si salva da sola ed è subito sincronizzata.</p>
+    </div>
+    <div class="three-grid" id="pin3">
+      <div class="steps3">
+        <div class="s3 on" data-i="0"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M1 20h22"/></svg>Dal computer</div><h3>Il pannello completo</h3><p>Tutte le schede a sinistra, l'anteprima dal vivo dell'invito a destra: vedete ogni modifica nell'istante in cui la fate.</p><div class="bar"><i></i></div></div>
+        <div class="s3" data-i="1"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>Dal telefono</div><h3>Pensato per il pollice</h3><p>Schede scorrevoli, temi a tre per riga, blocchi da riordinare con le frecce. E un tocco su "Anteprima" per vedere l'invito come lo vedranno gli ospiti.</p><div class="bar"><i></i></div></div>
+        <div class="s3" data-i="2"><div class="k"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg>Come app</div><h3>Sulla schermata Home</h3><p>Aggiungete Invitelle alla Home di iPhone o Android: si apre a tutto schermo come una vera app, con la sua icona. Niente store, niente download.</p><div class="bar"><i></i></div></div>
+      </div>
+      <div class="stage3" id="stage3">
+        <div class="dv d1"><div class="laptop"><div class="lid"><div class="scr"><img src="img/d-blocks.webp" alt="Pannello su computer: blocchi e anteprima live" loading="lazy"></div></div><div class="base"></div></div></div>
+        <div class="dv d2"><div class="phone"><div class="island"></div><div class="scr"><img src="img/m-blocks.webp" alt="Pannello su telefono: blocchi dell'invito" loading="lazy"></div></div></div>
+        <div class="dv d3"><div class="home"><div class="scr"><div class="time">9:41</div>
+          <div class="apps"><span class="app"><i></i>Foto</span><span class="app"><i></i>Meteo</span><span class="app"><i></i>Mappe</span><span class="app"><i></i>Note</span><span class="app"><i></i>Musica</span><span class="app inv"><i></i>Invitelle</span><span class="app"><i></i>Posta</span><span class="app"><i></i>Calendario</span></div>
+          <div class="dock"><i></i><i></i><i></i><i></i></div>
+          <div class="splash"><img src="img/logo-invitelle.png" alt=""></div>
+          <div class="appview"><img src="img/m-guests.webp" alt="Invitelle aperta come app: ospiti e RSVP" loading="lazy"></div>
+        </div></div>
+        <div class="hand-note"><b>Tocca e si apre</b>A tutto schermo, senza barra del browser.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ESPERIENZA OSPITE -->
+<section class="sec" id="ospiti">
+  <div class="wrap guest">
+    <div class="guest-stage rv">
+      <div class="phone env-ph" id="envPh"><div class="island"></div><div class="scr">
+        <div class="layer" id="invLayer"><div class="scroller"><img src="img/invite-long.webp" alt="L'invito come lo vede l'ospite" loading="lazy"></div></div>
+        <div class="layer" id="envLayer"><video id="envVid" src="video/env-riviera.mp4" poster="img/e-riviera.webp" muted playsinline preload="metadata"></video><button class="tap" id="tapBtn" type="button">Tocca per aprire</button></div>
+      </div></div>
+      <div class="env-pick" id="envPick">
+        <button class="on" data-e="riviera" aria-label="Busta Riviera"><img src="img/e-riviera.webp" alt=""></button>
+        <button data-e="ricamo" aria-label="Busta Ricamo di fiori"><img src="img/e-ricamo.webp" alt=""></button>
+        <button data-e="notte" aria-label="Busta Notte stellata"><img src="img/e-notte.webp" alt=""></button>
+        <button data-e="amalfi" aria-label="Busta Limoni di Amalfi"><img src="img/e-amalfi.webp" alt=""></button>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">Cosa vedranno i vostri ospiti</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px);margin:16px 0 18px">Un'emozione che inizia <em class="g">prima ancora</em> del matrimonio.</h2>
+      <p style="color:var(--ink2);font-size:18px;margin:0">Provatelo: toccate la busta. È esattamente quello che succede sul telefono di ogni invitato.</p>
+      <ul class="glist">
+        <li><span class="n">1</span><div><b>La busta si apre</b><span>Ceralacca, carta pregiata e un'apertura animata a tutto schermo.</span></div></li>
+        <li><span class="n">2</span><div><b>Il video con i vostri nomi</b><span>Il tema che avete scelto, con nomi e data scritti a mano, musica e atmosfera di petali, stelle o lucciole.</span></div></li>
+        <li><span class="n">3</span><div><b>Tutto quello che serve sapere</b><span>La vostra storia, il conto alla rovescia, luogo con mappa, programma, galleria, lista nozze con IBAN copiabile.</span></div></li>
+        <li><span class="n">4</span><div><b>Risponde in 20 secondi</b><span>RSVP con numero di persone, allergie e canzone preferita. Voi lo vedete subito nel pannello.</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="sec show" id="pannello">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <span class="eyebrow">Il pannello, dal vero</span>
+      <h2>Tutto quello che vi serve,<br>in un unico posto.</h2>
+      <p>Queste sono le schermate reali di Invitelle, non disegni. Toccate le schede.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="show-stage rv">
+      <div class="browser"><div class="bar"><i></i><i></i><i></i><span>invitelle · il vostro invito</span></div><div class="view" id="bView"></div></div>
+      <div class="phone"><div class="island"></div><div class="scr" id="pView"></div></div>
+    </div>
+    <div class="show-desc" id="sDesc"><h3></h3><p></p></div>
+  </div>
+</section>
+
+<!-- NUMERI -->
+<section class="sec" style="padding-bottom:60px">
+  <div class="wrap">
+    <div class="nums rv">
+      <div class="num"><b data-n="24">0</b><span>temi video</span></div>
+      <div class="num"><b data-n="16">0</b><span>buste animate</span></div>
+      <div class="num"><b data-n="16">0</b><span>tipi di blocco</span></div>
+      <div class="num"><b data-n="57">0</b><span>lingue</span></div>
+      <div class="num"><b data-n="10">0</b><span>atmosfere animate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNZIONI -->
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Tutto il pacchetto</span><h2>Non è solo un invito.<br>È la <em class="g">regia</em> del vostro matrimonio.</h2></div>
+    <div class="feat">
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div><h3>Busta con ceralacca</h3><p>16 buste pronte con apertura video, oppure create la vostra: colore, iniziali e sigillo.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Temi video cinematografici</h3><p>Amalfi, Toscana, Capri, una navata in chiesa: 24 video verticali con i vostri nomi sopra.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>16 blocchi su misura</h3><p>Storia, countdown, luogo con mappa, programma, galleria, lista nozze, trasporti, hotel, dress code e altro.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></div><h3>Ospiti su WhatsApp</h3><p>Un link personale per ogni invitato, invio con un tocco e promemoria a chi non ha ancora risposto.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3>RSVP e allergie</h3><p>Chi viene, in quanti, intolleranze, messaggi e canzoni. Tutto in un elenco, esportabile in CSV.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Budget, checklist e tavoli</h3><p>Il budget con grafico, la checklist mese per mese e i tavoli da trascinare, con il tableau pronto da stampare.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div><h3>Album foto con QR</h3><p>Stampate il cartoncino per i tavoli: gli ospiti inquadrano il QR e vi mandano foto e video della festa.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3>57 lingue</h3><p>Ospiti dall'estero? L'invito si traduce da solo, anche arabo ed ebraico da destra a sinistra.</p></div>
+      <div class="fc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3>Musica, effetti e sorprese</h3><p>Musica di sottofondo, petali e lucciole, data da grattare e brindisi con fuochi d'artificio nel finale.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFRONTO -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Fate due conti</span><h2>Carta o Invitelle?</h2></div>
+    <div class="cmp rv">
+      <div class="cmp-r"><div></div><div>Partecipazioni di carta</div><div>Invitelle</div></div>
+      <div class="cmp-r"><div>Costo</div><div>di solito centinaia di euro</div><div>29,99 € una volta</div></div>
+      <div class="cmp-r"><div>Spedizione e consegna</div><div>settimane, a mano o per posta</div><div>un tocco su WhatsApp</div></div>
+      <div class="cmp-r"><div>Errore nella data o nel luogo</div><div>ristampa</div><div>lo correggete in un minuto</div></div>
+      <div class="cmp-r"><div>Conferme di presenza</div><div>telefonate e messaggi</div><div>RSVP automatico</div></div>
+      <div class="cmp-r"><div>Allergie e intolleranze</div><div class="no">da chiedere uno a uno</div><div>raccolte nel modulo</div></div>
+      <div class="cmp-r"><div>Video, musica e mappa</div><div class="no">no</div><div>sì</div></div>
+      <div class="cmp-r"><div>Budget, checklist e tavoli</div><div class="no">no</div><div>inclusi</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREZZO -->
+<section class="sec" id="prezzo" style="background:linear-gradient(var(--bg),var(--bg2))">
+  <div class="wrap offer">
+    <div class="rv">
+      <span class="eyebrow">Cosa ricevete</span>
+      <h2 style="font-size:clamp(34px,4.6vw,54px);margin:16px 0 14px">Tutto il pacchetto.<br><em class="g">Un solo prezzo.</em></h2>
+      <p style="color:var(--ink2);font-size:18px;margin:0">Niente versioni base, niente funzioni a pagamento, niente abbonamento. Pagate una volta e avete tutto.</p>
+      <ul class="incl">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Pannello su computer, telefono e app</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>24 temi video + 16 buste animate</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Busta personalizzata con sigillo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>16 blocchi, font e colori a scelta</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>RSVP con allergie e canzoni</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Ospiti illimitati e invio WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Link personalizzato dell'invito</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>57 lingue</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Budget, checklist e tavoli</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Album foto e video con QR</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Musica, atmosfere e sorprese</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Modifiche illimitate</li>
+      </ul>
+    </div>
+    <div class="pcard rv" id="pcard">
+      <img class="seal-c" src="img/rosso.png" alt="">
+      <span class="tag">Offerta di lancio</span>
+      <h3>Invitelle · Pacchetto completo</h3>
+      <div class="p">29<sup>,99 €</sup></div>
+      <div class="once">pagamento unico · IVA inclusa</div>
+      <a class="btn" href="#acquista" data-checkout>Acquista e crea il tuo invito <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="mini">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento sicuro</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Codice subito via email</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COME FUNZIONA -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Come funziona</span><h2>Dall'acquisto all'invio,<br>in tre passi.</h2></div>
+    <div class="how">
+      <div class="hw rv"><h3>Ricevete il codice</h3><p>Subito dopo l'acquisto vi arriva via email il vostro codice personale. Niente registrazione, niente password.</p><img src="img/step-login.webp" alt="Accesso con il codice personale" loading="lazy" style="object-position:center"></div>
+      <div class="hw rv"><h3>Create l'invito</h3><p>Scegliete tema e busta, scrivete i vostri dati, aggiungete i blocchi. Vedete tutto dal vivo mentre lo create.</p><img src="img/d-theme.webp" alt="Scelta del tema" loading="lazy"></div>
+      <div class="hw rv"><h3>Inviatelo e rilassatevi</h3><p>Lo mandate su WhatsApp con un link personale per ogni ospite. Le risposte arrivano da sole nel pannello.</p><img src="img/d-guests.webp" alt="Ospiti e RSVP" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-h rv"><span class="eyebrow">Domande frequenti</span><h2>Tutto chiaro?</h2></div>
+    <div class="faq rv">
+      <details open><summary>Devo scaricare qualcosa?</summary><p>No. Invitelle funziona nel browser di computer e telefono. Se volete, potete aggiungerlo alla schermata Home e usarlo come un'app, a tutto schermo e con la sua icona.</p></details>
+      <details><summary>Come aggiungo l'app alla Home?</summary><p>Su iPhone aprite Invitelle con Safari, toccate Condividi e poi "Aggiungi alla schermata Home". Su Android aprite il menu di Chrome e toccate "Installa app" o "Aggiungi a schermata Home".</p></details>
+      <details><summary>Posso modificare l'invito dopo averlo inviato?</summary><p>Sì, quante volte volete. Il link resta lo stesso e gli ospiti vedono sempre la versione aggiornata: perfetto se cambia l'orario o vi accorgete di un errore.</p></details>
+      <details><summary>Ci sono costi nascosti o un abbonamento?</summary><p>No. 29,99 € una volta sola e avete tutto il pacchetto: temi, buste, RSVP, ospiti, lingue, album foto e pianificazione.</p></details>
+      <details><summary>Quanti ospiti posso invitare?</summary><p>Tutti quelli che volete. Potete aggiungerli uno a uno con il loro link personale, oppure condividere un unico link a tutti.</p></details>
+      <details><summary>Gli ospiti devono installare qualcosa?</summary><p>No. Toccano il link, si apre la busta e vedono l'invito. Rispondono all'RSVP direttamente dalla pagina.</p></details>
+      <details><summary>Serve essere bravi con la tecnologia?</summary><p>Per niente. Scegliete tra opzioni già pronte e scrivete i vostri dati: l'anteprima vi mostra subito il risultato. Se vi bloccate, scriveteci a invitellesupport@gmail.com.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section class="final">
+  <video src="video/amalfi.mp4" autoplay muted loop playsinline poster="img/t-amalfi.webp"></video>
+  <div class="wrap">
+    <span class="eyebrow">Il primo ricordo del vostro matrimonio</span>
+    <h2>Fatelo diventare<br><em style="color:var(--gold2)">indimenticabile.</em></h2>
+    <p>Il vostro invito, i vostri ospiti, la vostra organizzazione. Tutto il pacchetto a 29,99 €.</p>
+    <a class="btn" href="#prezzo">Crea il tuo invito ora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="#top"><img src="img/logo-invitelle.png" alt=""><b>Invitelle</b></a>
+  Inviti di nozze digitali · <a href="mailto:invitellesupport@gmail.com">invitellesupport@gmail.com</a>
+</footer>
+
+<div class="sticky" id="sticky"><div class="t">Pacchetto completo<b>29,99 €</b></div><a class="btn" href="#prezzo">Crea il tuo invito</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const mobile = matchMedia('(max-width:700px)').matches;
+const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* marquee temi e buste */
+const T = [['amalfi','Terrazza di Amalfi'],['chiesa','Navata in chiesa'],['sicilia','Terrazza in Sicilia'],['como','Villa sul Lago'],['toscana','Castello in Toscana'],['vigneto','Cena nel vigneto'],['giardino',"Giardino all'italiana"],['glicine','Pergola di glicine'],['puglia','Masseria in Puglia'],['mare','Altare sul mare'],['capri','Capri in barca'],['boho','Boho al tramonto'],['venezia','Palazzo a Venezia'],['serra','Serra di cristallo'],['dolomiti','Chalet nelle Dolomiti'],['inverno','Inverno incantato'],['parigi','Balcone a Parigi'],['santorini','Cupole di Santorini'],['lavanda','Lavanda in Provenza'],['marrakech','Riad a Marrakech'],['bosco','Bosco fatato'],['roma','Terrazza su Roma'],['ciliegi','Giardino dei ciliegi'],['reggia','Salone della Reggia']];
+const E = [['ricamo','Ricamo di fiori'],['salvia','Salvia ed eucalipto'],['notte','Notte stellata'],['amalfi','Limoni di Amalfi'],['peonie','Peonie cipria'],['pizzo','Pizzo chantilly'],['marmo','Marmo e oro'],['glicine','Glicine'],['bordeaux','Velluto bordeaux'],['uliveto','Uliveto'],['riviera','Riviera'],['pampas','Boho pampas'],['rose-bianche','Rose bianche'],['vigneto','Colline toscane'],['inverno',"Giardino d'inverno"],['art-deco','Art déco']];
+const fig = (p, [id, n]) => `<figure><img src="img/${p}-${id}.webp" alt="${n}" loading="lazy"><figcaption>${n}</figcaption></figure>`;
+$('#mq1').innerHTML = (T.map(t => fig('t', t)).join('')).repeat(2);
+$('#mq2').innerHTML = (E.map(e => fig('e', e)).join('')).repeat(2);
+$('#mq2').querySelectorAll('figure').forEach(f => f.style.aspectRatio = '1/1');
+
+/* header */
+addEventListener('scroll', () => {
+  $('#hdr').classList.toggle('sc', scrollY > 10);
+  const pr = $('#prezzo').getBoundingClientRect();
+  $('#sticky').classList.toggle('show', scrollY > 700 && !(pr.top < innerHeight && pr.bottom > 0));
+}, { passive: true });
+
+/* scena 3D hero: scala intera la composizione 640x600 sulla larghezza disponibile */
+const sb = $('#stageBox');
+const fit = () => sb.style.setProperty('--s', Math.min(1, sb.clientWidth / (innerWidth > 1020 ? 640 : 720)));
+fit(); addEventListener('resize', fit);
+/* scena 3D hero: segue il mouse (o il giroscopio) */
+const scene = $('#scene');
+let tx = 0, ty = 0, cx = 0, cy = 0;
+addEventListener('pointermove', e => { tx = (e.clientX / innerWidth - .5); ty = (e.clientY / innerHeight - .5); });
+addEventListener('deviceorientation', e => { if (e.gamma != null) { tx = Math.max(-.5, Math.min(.5, e.gamma / 60)); ty = Math.max(-.5, Math.min(.5, (e.beta - 45) / 60)); } });
+(function loop() {
+  cx += (tx - cx) * .06; cy += (ty - cy) * .06;
+  const s = Math.min(scrollY / 700, 1);
+  scene.style.transform = `rotateY(${cx * 14 - s * 8}deg) rotateX(${-cy * 10 + s * 10}deg) translateY(${s * 40}px)`;
+  requestAnimationFrame(loop);
+})();
+
+/* petali e luci dorate nella hero */
+const cv = $('#petals'), ctx = cv.getContext('2d');
+const dpr = Math.min(devicePixelRatio || 1, 1.5);
+let W, H, P = [];
+function size() { W = cv.offsetWidth; H = cv.offsetHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+size(); addEventListener('resize', size);
+const spr = (() => { const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d');
+  const r = g.createRadialGradient(32, 32, 0, 32, 32, 32); r.addColorStop(0, 'rgba(255,236,190,1)'); r.addColorStop(.3, 'rgba(214,180,110,.55)'); r.addColorStop(1, 'rgba(214,180,110,0)');
+  g.fillStyle = r; g.fillRect(0, 0, 64, 64); return c; })();
+const pet = (() => { const c = document.createElement('canvas'); c.width = 40; c.height = 40; const g = c.getContext('2d');
+  g.translate(20, 20); g.fillStyle = '#e9b9bf'; g.beginPath(); g.moveTo(0, -16); g.bezierCurveTo(14, -10, 12, 10, 0, 16); g.bezierCurveTo(-12, 10, -14, -10, 0, -16); g.fill();
+  g.fillStyle = 'rgba(255,255,255,.35)'; g.beginPath(); g.ellipse(-3, -4, 3, 8, .3, 0, 7); g.fill(); return c; })();
+for (let i = 0; i < (mobile ? 22 : 46); i++) P.push({ x: Math.random(), y: Math.random(), z: Math.random(), t: Math.random() * 6, k: Math.random() < .45 ? 'p' : 'g' });
+function draw(ts) {
+  ctx.clearRect(0, 0, W, H);
+  for (const p of P) {
+    p.t += .01; p.y += (p.k === 'p' ? .0009 : -.0003) * (0.5 + p.z);
+    p.x += Math.sin(p.t) * .0006;
+    if (p.y > 1.05) p.y = -.05; if (p.y < -.05) p.y = 1.05;
+    const x = p.x * W + cx * 40 * p.z, y = p.y * H + cy * 30 * p.z;
+    if (p.k === 'g') { const s = 10 + p.z * 26; ctx.globalAlpha = .4 + .4 * Math.sin(p.t * 2) ** 2; ctx.drawImage(spr, x - s / 2, y - s / 2, s, s); }
+    else { const s = 8 + p.z * 12; ctx.globalAlpha = .55 + p.z * .3; ctx.save(); ctx.translate(x, y); ctx.rotate(p.t); ctx.scale(1, Math.abs(Math.cos(p.t * 1.3)) * .8 + .2); ctx.drawImage(pet, -s / 2, -s / 2, s, s); ctx.restore(); }
+  }
+  ctx.globalAlpha = 1;
+  if (!reduce) requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+/* busta interattiva */
+const vid = $('#envVid'), envL = $('#envLayer'), tap = $('#tapBtn');
+let cur = 'riviera';
+function openEnv() {
+  tap.style.display = 'none';
+  vid.currentTime = 0; vid.playbackRate = 1.2; vid.play().catch(() => {});
+  const done = () => envL.classList.add('hide');
+  vid.onended = done; setTimeout(() => { if (!envL.classList.contains('hide')) done(); }, 4200);
+}
+function resetEnv(e) {
+  cur = e; vid.src = `video/env-${e}.mp4`; vid.poster = `img/e-${e}.webp`;
+  envL.classList.remove('hide'); tap.style.display = '';
+}
+tap.onclick = openEnv; envL.onclick = e => { if (e.target !== tap && tap.style.display !== 'none') openEnv(); };
+$('#envPick').onclick = e => { const b = e.target.closest('button'); if (!b) return;
+  $$('#envPick button').forEach(x => x.classList.toggle('on', x === b)); resetEnv(b.dataset.e); setTimeout(openEnv, 300); };
+
+/* showcase schede */
+const S = [
+  ['theme', 'Tema', 'Scegliete il vostro video', '24 ambientazioni cinematografiche, da Amalfi alla Reggia. Passate sopra una card per vederla muoversi.'],
+  ['envelope', 'Busta', "L'apertura della busta", "16 buste pronte con video di apertura, o la vostra busta personalizzata con iniziali e sigillo in ceralacca."],
+  ['details', 'Dettagli', 'Nomi, data e stile', 'Scrivete i vostri nomi e trascinateli nel punto del video dove si leggono meglio.'],
+  ['blocks', 'Blocchi', 'Costruite il vostro invito', 'Storia, countdown, luogo, programma, galleria, lista nozze: 16 blocchi da accendere, spegnere e riordinare.'],
+  ['guests', 'Ospiti e RSVP', 'Chi viene, in quanti, cosa mangia', 'Ogni risposta arriva da sola: persone, allergie, messaggi e canzoni. Invio e promemoria su WhatsApp con un tocco.'],
+  ['languages', 'Lingue', "57 lingue per gli ospiti dall'estero", "Testi, date e modulo RSVP tradotti in automatico. L'ospite sceglie la lingua in alto a destra."],
+  ['tools', 'Pianificazione', 'Budget, checklist e tavoli', "Il budget con il grafico delle spese, la checklist mese per mese e la disposizione dei tavoli da stampare."],
+  ['album', 'Album foto', 'Tutte le foto della festa', 'Stampate il cartoncino col QR: gli ospiti caricano foto e video e voi li trovate tutti in un unico archivio.'],
+];
+const M = { theme: 'm-theme', envelope: 'm-envelope', details: 'm-details', blocks: 'm-blocks', guests: 'm-guests2', languages: 'm-languages', tools: 'm-tools', album: 'm-album' };
+$('#tabs').innerHTML = S.map(([k, l], i) => `<button type="button" data-k="${k}" class="${i ? '' : 'on'}">${l}</button>`).join('');
+$('#bView').innerHTML = S.map(([k], i) => `<img src="img/d-${k}.webp" data-k="${k}" class="${i ? '' : 'on'}" alt="Scheda ${k} del pannello" loading="lazy">`).join('');
+$('#pView').innerHTML = [...new Set(Object.values(M))].map(m => `<img src="img/${m}.webp" data-m="${m}" alt="" loading="lazy">`).join('');
+let si = 0, sTimer;
+function showTab(i, user) {
+  si = i; const [k, , h, p] = S[i];
+  $$('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.k === k));
+  $$('#bView img').forEach(im => im.classList.toggle('on', im.dataset.k === k));
+  $$('#pView img').forEach(im => im.classList.toggle('on', im.dataset.m === M[k]));
+  $('#sDesc h3').textContent = h; $('#sDesc p').textContent = p;
+  clearInterval(sTimer); sTimer = setInterval(() => showTab((si + 1) % S.length), user ? 9000 : 4500);
+}
+$('#tabs').onclick = e => { const b = e.target.closest('button'); if (b) showTab(S.findIndex(s => s[0] === b.dataset.k), true); };
+showTab(0);
+
+/* tilt 3D su card */
+if (!mobile) $$('.fc,.pcard').forEach(el => {
+  el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    el.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-4px)`; });
+  el.addEventListener('pointerleave', () => el.style.transform = '');
+});
+
+if (!window.gsap) { $$('.rv').forEach(e => e.style.cssText = 'opacity:1;transform:none'); return; }
+gsap.registerPlugin(ScrollTrigger);
+
+/* entrata hero */
+gsap.from('.hero h1 .l span', { yPercent: 110, duration: 1.1, ease: 'power4.out', stagger: .12, delay: .1 });
+gsap.from('.h-in', { y: 24, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1, delay: .35 });
+gsap.from('.laptop', { opacity: 0, y: 80, rotateX: 30, duration: 1.4, ease: 'power3.out', delay: .2 });
+gsap.from('.ph-a', { opacity: 0, y: 140, duration: 1.3, ease: 'power3.out', delay: .5 });
+gsap.from('.ph-b', { opacity: 0, x: 80, duration: 1.3, ease: 'power3.out', delay: .65 });
+gsap.from('.seal3d,.hero .badge3d', { opacity: 0, scale: .6, duration: .9, ease: 'back.out(1.8)', stagger: .15, delay: 1 });
+
+/* reveal */
+$$('.rv').forEach(el => gsap.to(el, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
+
+/* contatori */
+$$('[data-n]').forEach(el => { const n = +el.dataset.n, o = { v: 0 };
+  ScrollTrigger.create({ trigger: el, start: 'top 90%', once: true, onEnter: () => gsap.to(o, { v: n, duration: 1.8, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(o.v) }) }); });
+
+/* tre schermi: sezione fissata, i dispositivi si trasformano scorrendo */
+const dv = $$('.dv'), s3 = $$('.s3');
+gsap.set(dv[0], { opacity: 1 });
+gsap.set(dv[1], { rotateY: 70, z: -300 }); gsap.set(dv[2], { rotateY: 70, z: -300 });
+const tl = gsap.timeline({ scrollTrigger: { trigger: '#pin3', start: mobile ? 'top 70px' : 'center center', end: '+=2400', pin: true, scrub: .8,
+  onUpdate: st => { const p = st.progress, i = p < .36 ? 0 : p < .7 ? 1 : 2;
+    s3.forEach((s, k) => { s.classList.toggle('on', k === i); s.querySelector('.bar i').style.width = (k < i ? 100 : k > i ? 0 : ((p - [0, .36, .7][i]) / [.36, .34, .3][i]) * 100) + '%'; }); } } });
+tl.to(dv[0], { rotateY: -70, z: -300, opacity: 0, duration: 1, ease: 'power2.in' }, 1)
+  .to(dv[1], { rotateY: 0, z: 0, opacity: 1, duration: 1, ease: 'power2.out' }, 1.6)
+  .to(dv[1], { rotateY: -70, z: -300, opacity: 0, duration: 1, ease: 'power2.in' }, 3)
+  .to(dv[2], { rotateY: 0, z: 0, opacity: 1, duration: 1, ease: 'power2.out' }, 3.6)
+  .to('.dv.d3 .splash', { clipPath: 'circle(150% at 37% 31%)', duration: .7, ease: 'power2.in' }, 4.7)
+  .to('.dv.d3 .appview', { opacity: 1, duration: .5 }, 5.5)
+  .to({}, { duration: .6 });
+s3.forEach((s, k) => s.onclick = () => { const st = tl.scrollTrigger; scrollTo({ top: st.start + (st.end - st.start) * [.05, .5, .97][k], behavior: 'smooth' }); });
+
+/* parallasse showcase */
+gsap.fromTo('.browser', { rotateX: 18, y: 60 }, { rotateX: 0, y: 0, ease: 'none', scrollTrigger: { trigger: '.show-stage', start: 'top bottom', end: 'center center', scrub: true } });
+
+/* busta: si apre da sola la prima volta che entra a schermo */
+ScrollTrigger.create({ trigger: '#envPh', start: 'top 55%', once: true, onEnter: () => setTimeout(openEnv, 600) });
+})();
+</script>
+</body>
+</html>
